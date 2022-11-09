@@ -1,34 +1,19 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/dang_ky.dart';
+// ignore: unused_import
+import 'package:mauflutter/views/info.dart';
+import 'package:mauflutter/views/trangchu.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import 'package:mauflutter/views/trangchu.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+class ketthuc extends StatefulWidget {
+  const ketthuc({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ketthuc> createState() => _ketthuc();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ketthuc extends State<ketthuc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +27,11 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(children: [
                 Container(
                     width: 80,
-                    child: Image(image: AssetImage('asset/back.png')))
+                    child: ElevatedButton(
+                      onPressed: (){}, 
+                      child: Image( image: AssetImage('asset/back.png')
+                      )
+                      )) 
               ]),
               Container(
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
