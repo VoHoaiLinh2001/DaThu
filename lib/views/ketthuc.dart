@@ -4,8 +4,6 @@ import 'package:mauflutter/views/dang_ky.dart';
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/trangchu.dart';
 
-import 'package:mauflutter/views/trangchu.dart';
-
 class ketthuc extends StatefulWidget {
   const ketthuc({super.key});
 
@@ -27,11 +25,9 @@ class _ketthuc extends State<ketthuc> {
               Row(children: [
                 Container(
                     width: 80,
-                    child: ElevatedButton(
-                      onPressed: (){}, 
-                      child: Image( image: AssetImage('asset/back.png')
-                      )
-                      )) 
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Image(image: AssetImage('asset/back.png'))))
               ]),
               Container(
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
@@ -137,11 +133,11 @@ class _ketthuc extends State<ketthuc> {
                                             image:
                                                 AssetImage('asset/nut.png'))),
                                     child: TextButton(
-                                        child: Text('Trang Chủ',
-                                        style: TextStyle(color: Colors.white)
-                                        ),
-                                        onPressed: (){},
-                                      ),
+                                      child: Text('Trang Chủ',
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                      onPressed: () {},
+                                    ),
                                     padding:
                                         EdgeInsets.fromLTRB(30, 10, 30, 10),
                                   ),
@@ -152,14 +148,12 @@ class _ketthuc extends State<ketthuc> {
                                         image: DecorationImage(
                                             image:
                                                 AssetImage('asset/nut.png'))),
-                                    child: 
-                                      TextButton(
-                                        child: Text('Tầng Tiếp Theo',
-                                        style: TextStyle(color: Colors.white)
-                                        ),
-                                        onPressed: (){},
-                                      ),
-                                    
+                                    child: TextButton(
+                                      child: Text('Tầng Tiếp Theo',
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                      onPressed: () {},
+                                    ),
                                     padding:
                                         EdgeInsets.fromLTRB(30, 10, 30, 10),
                                   ),
@@ -177,12 +171,12 @@ class _ketthuc extends State<ketthuc> {
                                         image: DecorationImage(
                                             image:
                                                 AssetImage('asset/nut.png'))),
-                                    child:  TextButton(
-                                        child: Text('Chơi Lại',
-                                        style: TextStyle(color: Colors.white)
-                                        ),
-                                        onPressed: (){},
-                                      ),
+                                    child: TextButton(
+                                      child: Text('Chơi Lại',
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                      onPressed: () {},
+                                    ),
                                     padding:
                                         EdgeInsets.fromLTRB(30, 10, 30, 10),
                                   ),
@@ -193,12 +187,12 @@ class _ketthuc extends State<ketthuc> {
                                         image: DecorationImage(
                                             image:
                                                 AssetImage('asset/nut.png'))),
-                                    child:  TextButton(
-                                        child: Text('Chọn Phụ Bản',
-                                        style: TextStyle(color: Colors.white)
-                                        ),
-                                        onPressed: (){},
-                                      ),
+                                    child: TextButton(
+                                      child: Text('Chọn Phụ Bản',
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                      onPressed: () {},
+                                    ),
                                     padding:
                                         EdgeInsets.fromLTRB(30, 10, 30, 10),
                                   ),

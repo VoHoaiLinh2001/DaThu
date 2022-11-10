@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/views/info.dart';
+import 'package:mauflutter/views/ketthuc.dart';
 
 class trangchu extends StatefulWidget {
   const trangchu({super.key});
@@ -36,7 +37,7 @@ class _trangchuState extends State<trangchu> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => const thongtin()),
+                            builder: ((context) => const ketthuc()),
                           ),
                         );
                       }),
