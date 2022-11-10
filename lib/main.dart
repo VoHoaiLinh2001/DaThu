@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mauflutter/views/dang_nhap.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/services/system_chrome.dart';
+import 'package:mauflutter/views/trong_tran.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: dangnhap(), //dang nhap
+      body: trongtran(), //dang nhap
     );
   }
 }
