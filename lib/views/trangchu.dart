@@ -41,11 +41,20 @@ class _trangchuState extends State<trangchu> {
                           ),
                         );
                       }),
-                      child: Image.asset(
-                        "asset/half_347.png",
-                        width: 22,
-                        fit: BoxFit.cover,
-                      ),
+                      child: Container(
+                          decoration: BoxDecoration(
+                            image: const DecorationImage(
+                              image: AssetImage('assets/avatar.png'),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(color: Colors.yellow, width: 2),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Image.asset(
+                            "asset/half_347.png",
+                            width: 22,
+                            fit: BoxFit.cover,
+                          )),
                     ),
                   ),
                 ),

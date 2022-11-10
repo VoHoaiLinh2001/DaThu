@@ -24,7 +24,8 @@ class _ketthuc extends State<ketthuc> {
             child: Column(children: [
               Row(children: [
                 Container(
-                    width: 80,
+                    margin: EdgeInsets.only(left: 10),
+                    width: 70,
                     child: TextButton(
                         onPressed: () {},
                         child: Image(image: AssetImage('asset/back.png'))))
@@ -38,7 +39,7 @@ class _ketthuc extends State<ketthuc> {
                         fit: BoxFit.fill)),
                 child: Container(
                     height: (MediaQuery.of(context).size.height) -
-                        ((MediaQuery.of(context).size.height) * 0.12),
+                        ((MediaQuery.of(context).size.height) * 0.11),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -105,7 +106,7 @@ class _ketthuc extends State<ketthuc> {
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.fromLTRB(20, 5, 20, 0),
+                                margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                                 padding: EdgeInsets.fromLTRB(30, 30, 30, 50),
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
@@ -122,9 +123,8 @@ class _ketthuc extends State<ketthuc> {
                               ),
                             ],
                           ),
-                          Container(
-                            margin: EdgeInsets.only(top: 10),
-                            child: Row(
+                          Column(children: [
+                            Row(
                               children: [
                                 Expanded(
                                   child: Container(
@@ -134,12 +134,11 @@ class _ketthuc extends State<ketthuc> {
                                                 AssetImage('asset/nut.png'))),
                                     child: TextButton(
                                       child: Text('Trang Chủ',
-                                          style:
-                                              TextStyle(color: Colors.white)),
+                                          style: TextStyle(color: Colors.white),
+                                          textAlign: TextAlign.center),
                                       onPressed: () {},
                                     ),
-                                    padding:
-                                        EdgeInsets.fromLTRB(30, 10, 30, 10),
+                                    padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
                                   ),
                                 ),
                                 Expanded(
@@ -150,20 +149,16 @@ class _ketthuc extends State<ketthuc> {
                                                 AssetImage('asset/nut.png'))),
                                     child: TextButton(
                                       child: Text('Tầng Tiếp Theo',
-                                          style:
-                                              TextStyle(color: Colors.white)),
+                                          style: TextStyle(color: Colors.white),
+                                          textAlign: TextAlign.center),
                                       onPressed: () {},
                                     ),
-                                    padding:
-                                        EdgeInsets.fromLTRB(30, 10, 30, 10),
+                                    padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
                                   ),
                                 )
                               ],
                             ),
-                            padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                          ),
-                          Container(
-                            child: Row(
+                            Row(
                               children: [
                                 Expanded(
                                   child: Container(
@@ -173,12 +168,11 @@ class _ketthuc extends State<ketthuc> {
                                                 AssetImage('asset/nut.png'))),
                                     child: TextButton(
                                       child: Text('Chơi Lại',
-                                          style:
-                                              TextStyle(color: Colors.white)),
+                                          style: TextStyle(color: Colors.white),
+                                          textAlign: TextAlign.center),
                                       onPressed: () {},
                                     ),
-                                    padding:
-                                        EdgeInsets.fromLTRB(30, 10, 30, 10),
+                                    padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
                                   ),
                                 ),
                                 Expanded(
@@ -189,19 +183,18 @@ class _ketthuc extends State<ketthuc> {
                                                 AssetImage('asset/nut.png'))),
                                     child: TextButton(
                                       child: Text('Chọn Phụ Bản',
-                                          style:
-                                              TextStyle(color: Colors.white)),
+                                          style: TextStyle(color: Colors.white),
+                                          textAlign: TextAlign.center),
                                       onPressed: () {},
                                     ),
-                                    padding:
-                                        EdgeInsets.fromLTRB(30, 10, 30, 10),
+                                    padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
                                   ),
                                 )
                               ],
                             ),
-                          ),
+                          ]),
                           Container(
-                              margin: EdgeInsets.only(bottom: 20),
+                              margin: EdgeInsets.only(bottom: 25),
                               height: MediaQuery.of(context).size.width / 4.0,
                               child: Stack(
                                 children: <Widget>[
