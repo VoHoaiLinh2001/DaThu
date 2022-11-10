@@ -44,7 +44,7 @@ class _trangchuState extends State<trangchu> {
                       child: Container(
                           decoration: BoxDecoration(
                             image: const DecorationImage(
-                              image: AssetImage('assets/avatar.png'),
+                              image: AssetImage('asset/avatar.png'),
                               fit: BoxFit.cover,
                             ),
                             border: Border.all(color: Colors.yellow, width: 2),
@@ -141,6 +141,7 @@ class _trangchuState extends State<trangchu> {
               ],
             ),
             Container(
+              width: MediaQuery.of(context).size.width / 1.2,
               height: 250,
               child: Image(
                   image: AssetImage(
@@ -180,35 +181,30 @@ class _trangchuState extends State<trangchu> {
                     ),
                     fit: BoxFit.cover),
               ),
-              width: 250,
-              height: 50,
+              width: MediaQuery.of(context).size.width / 1.1,
+              height: 80,
               padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
               child: TextButton(
                 child: const Text(
                   'Chơi ngay',
                   style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.black,
-                  ),
+                      fontSize: 33, color: Colors.black, fontFamily: 'MyFont'),
                 ),
                 onPressed: () {},
               ),
             ),
             Container(
+              margin: EdgeInsets.only(bottom: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 20),
                     child: Expanded(
                       child: Column(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
                             child: IconButton(
                               icon: Image.asset('asset/icon_op12.png'),
-                              iconSize: 150,
                               onPressed: () {},
                             ),
                           ),
@@ -218,17 +214,13 @@ class _trangchuState extends State<trangchu> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 20),
                     child: Expanded(
                       child: Column(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("asset/icon_op30.png"),
-                                  fit: BoxFit.fill),
+                            child: IconButton(
+                              icon: Image.asset('asset/icon_op30.png'),
+                              onPressed: () {},
                             ),
                           ),
                           Text('Xếp hạng'),
@@ -237,17 +229,13 @@ class _trangchuState extends State<trangchu> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 20),
                     child: Expanded(
                       child: Column(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("asset/icon_op42.png"),
-                                  fit: BoxFit.fill),
+                            child: IconButton(
+                              icon: Image.asset('asset/icon_op42.png'),
+                              onPressed: () {},
                             ),
                           ),
                           Text('Trang chủ'),
@@ -256,17 +244,13 @@ class _trangchuState extends State<trangchu> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 20),
                     child: Expanded(
                       child: Column(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("asset/icon_op24.png"),
-                                  fit: BoxFit.fill),
+                            child: IconButton(
+                              icon: Image.asset('asset/icon_op24.png'),
+                              onPressed: () {},
                             ),
                           ),
                           const Text('Bạn bè'),
@@ -275,17 +259,13 @@ class _trangchuState extends State<trangchu> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 20),
                     child: Expanded(
                       child: Column(
                         children: [
                           Container(
-                            width: 40,
-                            height: 40,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("asset/icon_op7.png"),
-                                  fit: BoxFit.fill),
+                            child: IconButton(
+                              icon: Image.asset('asset/icon_op7.png'),
+                              onPressed: () {},
                             ),
                           ),
                           Text('Nạp'),
