@@ -27,7 +27,14 @@ class _ketthuc extends State<ketthuc> {
                     margin: EdgeInsets.only(left: 10),
                     width: 70,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => const trangchu()),
+                            ),
+                          );
+                        },
                         child: Image(image: AssetImage('asset/back.png'))))
               ]),
               Container(
