@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mauflutter/views/dang_nhap.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/services/system_chrome.dart';
+import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/khung.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/trangchu.dart';
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: khung(), //dang nhap
+      body: ketthuc(), //dang nhap
     );
   }
 }

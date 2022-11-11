@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/dang_nhap.dart';
+import 'package:mauflutter/views/khung.dart';
 
 class thongtin extends StatefulWidget {
   const thongtin({super.key});
 
   @override
-  State<thongtin> createState() => _trangchuState();
+  State<thongtin> createState() => _thongtinState();
 }
 
-class _trangchuState extends State<thongtin> {
+class _thongtinState extends State<thongtin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -262,17 +264,28 @@ class _trangchuState extends State<thongtin> {
                                       ),
                                     ),
                                     Container(
-                                      padding:
-                                          EdgeInsets.fromLTRB(20, 7, 20, 7),
+                                      height: 35,
                                       decoration: const BoxDecoration(
                                           image: DecorationImage(
                                               image: AssetImage(
                                                   "asset/huanpi_gongyong_anniu_0.png"),
                                               fit: BoxFit.fill)),
-                                      child: Text(
-                                        'Chọn khung',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                      child: TextButton(
+                                        child: Text(
+                                          'Chọn khung',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 10),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: ((context) =>
+                                                  const khung()),
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ],
@@ -283,17 +296,14 @@ class _trangchuState extends State<thongtin> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 5),
+                        //padding: EdgeInsets.only(top: 5),
+                        height: 50,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                                //margin: EdgeInsets.only(left: 5),
-
-                                ),
-                            Container(
-                              margin: EdgeInsets.only(left: 30),
-                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                              //margin: EdgeInsets.only(left: 30),
+                              padding: EdgeInsets.fromLTRB(20, 10, 20, 5),
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage(
@@ -301,11 +311,22 @@ class _trangchuState extends State<thongtin> {
                                   fit: BoxFit.fill,
                                 ),
                               ),
-                              child: Text(
-                                'Đăng xuất',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.white, fontFamily: 'MyFont'),
+                              child: TextButton(
+                                child: Text(
+                                  'Đăng xuất',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'MyFont'),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: ((context) => const dangnhap()),
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                           ],

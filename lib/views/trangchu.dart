@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/models/thong_tin_hang.dart';
+// ignore: unused_import
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/views/phan_hang.dart';
+import 'package:mauflutter/views/shop.dart';
 
 class trangchu extends StatefulWidget {
   const trangchu({super.key});
@@ -26,38 +30,37 @@ class _trangchuState extends State<trangchu> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                    margin: EdgeInsets.only(top: 20),
-                    height: 50,
-                    width: 50,
-                    /* child: Material(
-                    // needed
+                  margin: EdgeInsets.only(top: 20),
+                  height: 50,
+                  width: 50,
+                  child: Material(
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: (() {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => const ketthuc()),
+                            builder: ((context) => thongtin()),
                           ),
                         );
-                      }), 
-                  child: Container(*/
-                    decoration: BoxDecoration(
-                      image: const DecorationImage(
-                        image: AssetImage('asset/avatar.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      border: Border.all(color: Colors.yellow, width: 2),
-                      borderRadius: BorderRadius.circular(5),
+                      }),
+                      child: Container(
+                          decoration: BoxDecoration(
+                            image: const DecorationImage(
+                              image: AssetImage('asset/avatar.png'),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(color: Colors.yellow, width: 2),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Image.asset(
+                            "asset/half_347.png",
+                            width: 22,
+                            fit: BoxFit.cover,
+                          )),
                     ),
-                    child: Image.asset(
-                      "asset/half_347.png",
-                      width: 22,
-                      fit: BoxFit.cover,
-                    ) //),
-                    /*   ),
-                  ), */
-                    ),
+                  ),
+                ),
                 Column(
                   children: [
                     Container(
@@ -162,11 +165,21 @@ class _trangchuState extends State<trangchu> {
                   ),
                   child: Container(
                     padding: EdgeInsets.only(top: 60),
-                    child: Text(
-                      "BXH",
-                      textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    child: TextButton(
+                      child: Text(
+                        "BXH",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: ((context) => const phanhang()),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ),
@@ -212,7 +225,14 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op12.png'),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const shop()),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Text('Shop'),

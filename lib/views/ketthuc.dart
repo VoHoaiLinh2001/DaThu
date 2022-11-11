@@ -72,41 +72,45 @@ class _ketthuc extends State<ketthuc> {
                                       image: AssetImage('asset/thongtin.png'),
                                       fit: BoxFit.fill),
                                 ),
-                                child: Column(children: [
-                                  Row(children: [
-                                    Expanded(
-                                        flex: 2,
-                                        child: Container(
-                                            margin: EdgeInsets.fromLTRB(
-                                                30, 50, 0, 0),
-                                            child: Text("Điểm số",
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    color: Colors.white)))),
-                                    Expanded(
-                                        flex: 2,
-                                        child: Container(
-                                            margin: EdgeInsets.fromLTRB(
-                                                30, 10, 0, 0),
-                                            child: Text("Doãn Chí Bình",
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight:
-                                                        FontWeight.bold)))),
-                                    Expanded(
-                                        flex: 3,
-                                        child: Container(
-                                          margin: EdgeInsets.only(top: 40),
-                                          child: Image(
-                                            height: 150,
-                                            image:
-                                                AssetImage('asset/nhanvat.png'),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        )),
-                                  ])
-                                ]),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                            flex: 2,
+                                            child: Container(
+                                                margin: EdgeInsets.fromLTRB(
+                                                    30, 50, 0, 0),
+                                                child: Text("Điểm số",
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        color: Colors.white)))),
+                                        Expanded(
+                                            flex: 2,
+                                            child: Container(
+                                                margin: EdgeInsets.fromLTRB(
+                                                    30, 10, 0, 0),
+                                                child: Text("Doãn Chí Bình",
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.bold)))),
+                                        Expanded(
+                                            flex: 3,
+                                            child: Container(
+                                              margin: EdgeInsets.only(top: 40),
+                                              child: Image(
+                                                height: 150,
+                                                image: AssetImage(
+                                                    'asset/nhanvat.png'),
+                                                fit: BoxFit.fill,
+                                              ),
+                                            )),
+                                      ],
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           ),
