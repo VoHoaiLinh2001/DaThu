@@ -5,6 +5,7 @@ import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/shop.dart';
+import 'package:mauflutter/views/trong_tran.dart';
 
 class trangchu extends StatefulWidget {
   const trangchu({super.key});
@@ -40,7 +41,7 @@ class _trangchuState extends State<trangchu> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => thongtin()),
+                            builder: ((context) => const thongtin()),
                           ),
                         );
                       }),
@@ -207,7 +208,7 @@ class _trangchuState extends State<trangchu> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => const ketthuc()),
+                      builder: ((context) => const trongtran()),
                     ),
                   );
                 },
