@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/khung.dart';
 
 class thongtin extends StatefulWidget {
   const thongtin({super.key});
@@ -269,10 +270,20 @@ class _trangchuState extends State<thongtin> {
                                               image: AssetImage(
                                                   "asset/huanpi_gongyong_anniu_0.png"),
                                               fit: BoxFit.fill)),
-                                      child: Text(
-                                        'Chọn khung',
+                                      child: TextButton(
+                                        child: const Text( 'Chọn khung',
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                        color: Colors.white, fontSize: 14),
+                                        ),
+                                        onPressed: (){
+                                          Navigator.push(
+                                            context, 
+                                            MaterialPageRoute(
+                                              builder: 
+                                              ((context) => const khung()),
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ],
