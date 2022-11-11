@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/views/trong_tran.dart';
 
 class trangchu extends StatefulWidget {
   const trangchu({super.key});
@@ -26,10 +27,10 @@ class _trangchuState extends State<trangchu> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                    margin: EdgeInsets.only(top: 20),
-                    height: 50,
-                    width: 50,
-                    /* child: Material(
+                  margin: EdgeInsets.only(top: 20),
+                  height: 50,
+                  width: 50,
+                  child: Material(
                     // needed
                     color: Colors.transparent,
                     child: InkWell(
@@ -40,24 +41,24 @@ class _trangchuState extends State<trangchu> {
                             builder: ((context) => const ketthuc()),
                           ),
                         );
-                      }), 
-                  child: Container(*/
-                    decoration: BoxDecoration(
-                      image: const DecorationImage(
-                        image: AssetImage('asset/avatar.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      border: Border.all(color: Colors.yellow, width: 2),
-                      borderRadius: BorderRadius.circular(5),
+                      }),
+                      child: Container(
+                          decoration: BoxDecoration(
+                            image: const DecorationImage(
+                              image: AssetImage('asset/avatar.png'),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(color: Colors.yellow, width: 2),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Image.asset(
+                            "asset/half_347.png",
+                            width: 22,
+                            fit: BoxFit.cover,
+                          )),
                     ),
-                    child: Image.asset(
-                      "asset/half_347.png",
-                      width: 22,
-                      fit: BoxFit.cover,
-                    ) //),
-                    /*   ),
-                  ), */
-                    ),
+                  ),
+                ),
                 Column(
                   children: [
                     Container(
@@ -194,7 +195,7 @@ class _trangchuState extends State<trangchu> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => const ketthuc()),
+                      builder: ((context) => const trongtran()),
                     ),
                   );
                 },

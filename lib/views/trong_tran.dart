@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/trangchu.dart';
 
 class trongtran extends StatefulWidget {
@@ -31,7 +32,7 @@ class _trongtranState extends State<trongtran> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: ((context) => const trangchu()),
+                              builder: ((context) => const ketthuc()),
                             ),
                           );
                         },

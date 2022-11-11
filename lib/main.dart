@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/dang_ky.dart';
 import 'package:mauflutter/views/dang_nhap.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/services/system_chrome.dart';
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: khung(), //dang nhap
+      body: dangnhap(), //dang nhap
     );
   }
 }
