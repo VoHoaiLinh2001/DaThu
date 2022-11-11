@@ -5,8 +5,10 @@ import 'package:flutter/src/services/system_chrome.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran.dart';
+import 'package:mauflutter/models/db_context.dart';
 
 void main() {
+  db_context.createData();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
