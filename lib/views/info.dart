@@ -13,7 +13,7 @@ class _trangchuState extends State<thongtin> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 5, left: 10),
+        padding: EdgeInsets.only(top: 0, left: 10),
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("asset/bg_shen.jpg"),
@@ -127,7 +127,6 @@ class _trangchuState extends State<thongtin> {
                 Container(
                   margin: EdgeInsets.only(top: 5),
                   width: 260,
-                  height: 450,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("asset/buff_kuang.png"),
@@ -271,16 +270,18 @@ class _trangchuState extends State<thongtin> {
                                                   "asset/huanpi_gongyong_anniu_0.png"),
                                               fit: BoxFit.fill)),
                                       child: TextButton(
-                                        child: const Text( 'Chọn khung',
-                                        style: TextStyle(
-                                        color: Colors.white, fontSize: 14),
+                                        child: const Text(
+                                          'Chọn khung',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 13),
                                         ),
-                                        onPressed: (){
+                                        onPressed: () {
                                           Navigator.push(
-                                            context, 
+                                            context,
                                             MaterialPageRoute(
-                                              builder: 
-                                              ((context) => const khung()),
+                                              builder: ((context) =>
+                                                  const khung()),
                                             ),
                                           );
                                         },
@@ -303,8 +304,8 @@ class _trangchuState extends State<thongtin> {
 
                                 ),
                             Container(
-                              margin: EdgeInsets.only(left: 30),
-                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                              margin: EdgeInsets.only(left: 20),
+                              padding: EdgeInsets.fromLTRB(20, 10, 20, 5),
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage(

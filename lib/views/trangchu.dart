@@ -38,7 +38,7 @@ class _trangchuState extends State<trangchu> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => const ketthuc()),
+                            builder: ((context) => const thongtin()),
                           ),
                         );
                       }),
