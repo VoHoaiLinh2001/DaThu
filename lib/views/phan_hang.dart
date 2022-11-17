@@ -122,21 +122,22 @@ class _phanhangState extends State<phanhang> {
             ),
             Column(children: [
               Container(
-                  height: 50,
-                  margin: EdgeInsets.only(top: 5),
-                  padding: EdgeInsets.fromLTRB(140, 8, 140, 0),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("asset/sdk_notice_title_bg.png"),
-                        fit: BoxFit.fill),
-                  ),
-                  child: Column(
-                    children: [
-                      Text('Bảng xếp hạng',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 30))
-                    ],
-                  )),
+                  child: Stack(children: <Widget>[
+                Image(
+                    width: MediaQuery.of(context).size.width,
+                    height: 55,
+                    image: AssetImage('asset/sdk_notice_title_bg.png'),
+                    fit: BoxFit.fill),
+                Container(
+                    margin: EdgeInsets.only(top: 8),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Bảng xếp hạng',
+                              style:
+                                  TextStyle(fontSize: 18, fontFamily: 'MyFont'))
+                        ]))
+              ])),
               Column(children: [
                 Container(
                     //shouchonglibao_anniu.png
@@ -151,7 +152,6 @@ class _phanhangState extends State<phanhang> {
                         Expanded(
                             child: Container(
                           margin: EdgeInsets.fromLTRB(40, 5, 40, 0),
-                          padding: EdgeInsets.all(12),
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
@@ -175,7 +175,6 @@ class _phanhangState extends State<phanhang> {
                         Expanded(
                             child: Container(
                           margin: EdgeInsets.fromLTRB(40, 5, 40, 0),
-                          padding: EdgeInsets.all(12),
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
