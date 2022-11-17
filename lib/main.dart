@@ -45,8 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: dangnhap(),//asdadasd
-       //isgdfifgdsuifgkdsgfkjgdskjgfkjdsgfkgdkgfkdsgfiywegfkjgwiugkurer872387e432y482qjfjhsfsdvkhfgskjiuw4eiugvksfkhddsi
+      body: dangnhap(),
     );
   }
 }

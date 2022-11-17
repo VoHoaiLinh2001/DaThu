@@ -13,8 +13,8 @@ class _trongtranState extends State<trongtran> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-            constraints: BoxConstraints.expand(),
+        body: Container( 
+          constraints: BoxConstraints.expand(),
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
