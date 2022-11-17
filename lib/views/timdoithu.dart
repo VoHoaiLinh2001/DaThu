@@ -34,7 +34,7 @@ class _timdoithuState extends State<timdoithu> {
             ),
             Container(
               width: 170,
-              height: 230,
+              height: 240,
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage('asset/hero_card_pizhi8_7.png'),
                 fit: BoxFit.fill)
@@ -67,7 +67,7 @@ class _timdoithuState extends State<timdoithu> {
             )),
             Container(
               width: 170,
-              height: 230,
+              height: 240,
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage('asset/hero_card_pizhi8_7.png'),
                 fit: BoxFit.fill)
