@@ -144,6 +144,28 @@ class _shop extends State<shop> {
                                 ),
                                 ),
                               ),
+                              Row( mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage('asset/close.png'))
+                                    ),
+                                    child: TextButton(
+                                      onPressed: (){
+                                        Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                           builder: ((context) => const trangchu()),
+                                        ),
+                                         );
+                                      },
+                                      child: Text('')
+                                    )
+                                  ),
+                                ],
+                              )
                             ],
                           ),
                          

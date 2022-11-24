@@ -6,6 +6,7 @@ import 'package:flutter/src/services/system_chrome.dart';
 import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/khung.dart';
 import 'package:mauflutter/views/phan_hang.dart';
+import 'package:mauflutter/views/timdoithu.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran.dart';
 import 'package:mauflutter/models/db_context.dart';
