@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/views/chedochoi.dart';
+import 'package:mauflutter/views/chonchude.dart';
 import 'package:mauflutter/views/dang_ky.dart';
 import 'package:mauflutter/views/dang_nhap.dart';
 import 'package:flutter/services.dart';
@@ -47,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: chedochoi(),
+      body: chonchude(),
     );
   }
 }

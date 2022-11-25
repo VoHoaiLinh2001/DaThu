@@ -1,0 +1,163 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:mauflutter/views/trangchu.dart';
+
+class chonchude extends StatefulWidget {
+  const chonchude({super.key});
+
+  @override
+  State<chonchude> createState() => _chonchude();
+}
+
+class _chonchude extends State<chonchude> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body:Container(
+          constraints: BoxConstraints.expand(),
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage('asset/bg_lose.jpg'),
+            fit: BoxFit.fill)
+          ),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width/4,
+                    height: (MediaQuery.of(context).size.width/3)/2,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('asset/back.png'),
+                      fit: BoxFit.fill)
+                    ),
+                    child: TextButton(
+                      child: Text(''),
+                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: ((context) => const trangchu()),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 30,left: 100),
+                          width: (MediaQuery.of(context).size.height/3)*2,
+                          height: MediaQuery.of(context).size.height/5,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('asset/huanpi_gongyong_juqing_4.png'),
+                            fit: BoxFit.fill)
+                          ),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('CHỌN CHỦ ĐỀ',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            ],
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 25,left: 40),
+                      width: MediaQuery.of(context).size.height/2,
+                      height: MediaQuery.of(context).size.width/4,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage('asset/TZFB_02.png'),
+                        fit: BoxFit.fill)
+                      ),
+                      child: Column(children: [
+                        Text('ÂM NHẠC',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                      ]),
+                    )
+                  ],
+                ),
+              ),
+               Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 25,left: 40),
+                      width: MediaQuery.of(context).size.height/2,
+                      height: MediaQuery.of(context).size.width/4,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage('asset/TZFB_010.png'),
+                        fit: BoxFit.fill)
+                      ),
+                      child: Column(children: [
+                        Text('THỂ THAO',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                      ]),
+                    )
+                  ],
+                ),
+              ),
+               Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 25,left: 40),
+                      width: MediaQuery.of(context).size.height/2,
+                      height: MediaQuery.of(context).size.width/4,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage('asset/TZFB_08.png'),
+                        fit: BoxFit.fill)
+                      ),
+                      child: Column(children: [
+                        Text('KHOA HỌC',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                      ]),
+                    )
+                  ],
+                ),
+              ),
+               Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 25,left: 40),
+                      width: MediaQuery.of(context).size.height/2,
+                      height: MediaQuery.of(context).size.width/4,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage('asset/TZFB_04.png'),
+                        fit: BoxFit.fill)
+                      ),
+                      child: Column(children: [
+                        Text('LỊCH SỬ',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                      ]),
+                    )
+                  ],
+                ),
+              ),
+               Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 25,left: 40),
+                      width: MediaQuery.of(context).size.height/2,
+                      height: MediaQuery.of(context).size.width/4,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage('asset/TZFB_05.png'),
+                        fit: BoxFit.fill)
+                      ),
+                      child: Column(children: [
+                        Text('ĐỊA LÝ',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                      ]),
+                    )
+                  ],
+                ),
+              )
+            ]
+          )
+        )
+    );
+  }
+}
