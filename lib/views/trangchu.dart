@@ -7,6 +7,7 @@ import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/shop.dart';
 import 'package:mauflutter/views/trong_tran.dart';
 
+import 'chedochoi.dart';
 import 'dang_nhap.dart';
 import 'khung.dart';
 
@@ -425,7 +426,7 @@ class _trangchuState extends State<trangchu> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => const trongtran()),
+                      builder: ((context) => const chedochoi()),
                     ),
                   );
                 },

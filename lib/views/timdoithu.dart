@@ -21,15 +21,15 @@ class _timdoithuState extends State<timdoithu> {
         child: Column(
           children: [
             Container(
-              height: 200,
-              width: 500,
+              height: 100,
+              width: 400,
               child: Image(image: AssetImage('asset/1.png'),
               fit: BoxFit.fill,),
             ),
             Container(
               child: Text('Đấu Xếp Hạng',
               style: TextStyle(
-                fontSize: 70
+                fontSize: 40
               ),),
             ),
             Container(
