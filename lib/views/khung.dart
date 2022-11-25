@@ -18,7 +18,7 @@ class _khung extends State<khung> {
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('asset/khung.jpg'), fit: BoxFit.fill)),
+              image: AssetImage('asset/denglu_bg.jpg'), fit: BoxFit.fill)),
       child: Container(
         child: Column(children: [
           Row(

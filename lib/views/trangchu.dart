@@ -7,6 +7,9 @@ import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/shop.dart';
 import 'package:mauflutter/views/trong_tran.dart';
 
+import 'dang_nhap.dart';
+import 'khung.dart';
+
 class trangchu extends StatefulWidget {
   const trangchu({super.key});
 
@@ -33,32 +36,282 @@ class _trangchuState extends State<trangchu> {
                 Container(
                   margin: EdgeInsets.only(top: 20),
                   height: 50,
-                  width: 50,
+                  width: 65,
                   child: Material(
                     color: Colors.transparent,
-                    child: InkWell(
-                      onTap: (() {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: ((context) => const thongtin()),
-                          ),
-                        );
+                    child: TextButton(
+                      onPressed: (() {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                content: Stack(
+                                  children: [
+                                    Container(
+                                      //margin: EdgeInsets.only(top: 5),
+                                      width: 260,
+                                      decoration: const BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "asset/buff_kuang.png"),
+                                            fit: BoxFit.fill),
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.only(top: 20),
+                                            child: Text('Tên người chơi'),
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(top: 29),
+                                            height: 147,
+                                            width: 176,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                image: AssetImage(
+                                                    "asset/Untitled-2.png"),
+                                                fit: BoxFit.cover,
+                                              ),
+                                              border: Border.all(
+                                                  color: Colors.yellow,
+                                                  width: 2),
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.yellow
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 10,
+                                                  blurRadius: 5,
+                                                  offset: Offset(0,
+                                                      3), // changes position of shadow
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            padding: EdgeInsets.fromLTRB(
+                                                20, 5, 20, 5),
+                                            decoration: const BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      "asset/huanpi_gongyong_anniu_0.png"),
+                                                  fit: BoxFit.fill),
+                                            ),
+                                            child: Text(
+                                              'Đổi Avatar',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 15),
+                                            ),
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  margin:
+                                                      EdgeInsets.only(top: 40),
+                                                  padding: EdgeInsets.only(
+                                                      left: 20, right: 20),
+                                                  child: Text(
+                                                    'Cảnh giới',
+                                                    style:
+                                                        TextStyle(fontSize: 16),
+                                                  ),
+                                                ),
+                                                /*Container(
+                            child: Image(
+                                width: 30,
+                                height: 30,
+                                image: AssetImage(
+                                    'asset/migong_chuansongmen2.png')) /*migong_chuansongmen2.png*/),*/
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      top: 40, left: 55),
+                                                  //padding: EdgeInsets.only(left: 20, right: 20),
+                                                  child: Text(
+                                                    'Id:0123456',
+                                                    style:
+                                                        TextStyle(fontSize: 16),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(top: 10),
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  child: Expanded(
+                                                    child: Column(
+                                                      children: [
+                                                        Text('Mức rank'),
+                                                        Container(
+                                                            width: 50,
+                                                            height: 50,
+                                                            margin:
+                                                                EdgeInsets.only(
+                                                                    top: 5,
+                                                                    bottom: 5),
+                                                            child: Image(
+                                                              image: AssetImage(
+                                                                  'asset/icon_duanwei_06.png'),
+                                                            )),
+                                                        Text('Tên rank'),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(top: 10),
+                                                  child: Expanded(
+                                                    child: Column(
+                                                      children: [
+                                                        Container(
+                                                          padding: EdgeInsets
+                                                              .fromLTRB(
+                                                                  30, 5, 30, 5),
+                                                          decoration:
+                                                              const BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: AssetImage(
+                                                                    "asset/huanpi_gongyong_anniu_0.png"),
+                                                                fit: BoxFit
+                                                                    .fill),
+                                                          ),
+                                                          child: Text(
+                                                            'Âm nhạc',
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 14),
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  top: 5,
+                                                                  bottom: 5),
+                                                          padding: EdgeInsets
+                                                              .fromLTRB(13, 10,
+                                                                  13, 10),
+                                                          decoration:
+                                                              const BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: AssetImage(
+                                                                    "asset/huanpi_gongyong_anniu_0.png"),
+                                                                fit: BoxFit
+                                                                    .fill),
+                                                          ),
+                                                          child: Text(
+                                                            'Hiệu ứng âm thanh',
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 11),
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          height: 35,
+                                                          decoration: const BoxDecoration(
+                                                              image: DecorationImage(
+                                                                  image: AssetImage(
+                                                                      "asset/huanpi_gongyong_anniu_0.png"),
+                                                                  fit: BoxFit
+                                                                      .fill)),
+                                                          child: TextButton(
+                                                            child: Text(
+                                                              'Chọn khung',
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 10),
+                                                            ),
+                                                            onPressed: () {
+                                                              Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                  builder:
+                                                                      ((context) =>
+                                                                          const khung()),
+                                                                ),
+                                                              );
+                                                            },
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                          Container(
+                                            //padding: EdgeInsets.only(top: 5),
+                                            height: 50,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                    //margin: EdgeInsets.only(left: 30),
+                                                    //margin: EdgeInsets.only(left: 5),
+                                                    ),
+                                                Container(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      15, 10, 20, 5),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    image: DecorationImage(
+                                                      image: AssetImage(
+                                                          "asset/huanpi_gongyong_anniu_0.png"),
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                  ),
+                                                  child: TextButton(
+                                                    child: Text(
+                                                      'Đăng xuất',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontFamily: 'MyFont'),
+                                                    ),
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: ((context) =>
+                                                              const dangnhap()),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            });
                       }),
                       child: Container(
-                          decoration: BoxDecoration(
-                            image: const DecorationImage(
-                              image: AssetImage('asset/avatar.png'),
-                              fit: BoxFit.cover,
-                            ),
-                            border: Border.all(color: Colors.yellow, width: 2),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: Image.asset(
-                            "asset/half_347.png",
-                            width: 22,
+                        decoration: BoxDecoration(
+                          image: const DecorationImage(
+                            image: AssetImage('asset/avatar.png'),
                             fit: BoxFit.cover,
-                          )),
+                          ),
+                          border: Border.all(color: Colors.yellow, width: 2),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -151,7 +404,7 @@ class _trangchuState extends State<trangchu> {
                   image: AssetImage(
                     "asset/half_306.png",
                   ),
-                  fit: BoxFit.cover),
+                  fit: BoxFit.fill),
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
