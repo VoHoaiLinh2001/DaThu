@@ -19,10 +19,11 @@ class _timdoithuState extends State<timdoithu> {
         image: AssetImage('asset/bg_toumingdi.png'),
         fit: BoxFit.fill,
       )),
-      child: Column(children: [
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
         Container(
-          height: 200,
-          width: 500,
+          height: 120,
+          width: MediaQuery.of(context).size.width,
           child: Image(
             image: AssetImage('asset/1.png'),
             fit: BoxFit.fill,
@@ -31,12 +32,12 @@ class _timdoithuState extends State<timdoithu> {
         Container(
           child: Text(
             'Đấu Xếp Hạng',
-            style: TextStyle(fontSize: 70),
+            style: TextStyle(fontSize: 50),
           ),
         ),
         Container(
-            width: 170,
-            height: 240,
+            width: 150,
+            height: MediaQuery.of(context).size.height / 4.0,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('asset/hero_card_pizhi8_7.png'),
@@ -47,7 +48,6 @@ class _timdoithuState extends State<timdoithu> {
             ),
             padding: EdgeInsets.fromLTRB(15, 20, 10, 10)),
         Container(
-            margin: EdgeInsets.only(bottom: 10),
             height: MediaQuery.of(context).size.width / 4.0,
             child: Stack(
               children: <Widget>[
@@ -70,8 +70,8 @@ class _timdoithuState extends State<timdoithu> {
               ],
             )),
         Container(
-            width: 170,
-            height: 240,
+            width: 150,
+            height: MediaQuery.of(context).size.height / 4.0,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('asset/hero_card_pizhi8_7.png'),

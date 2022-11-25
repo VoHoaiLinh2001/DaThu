@@ -13,8 +13,8 @@ class _trongtranState extends State<trongtran> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container( 
-          constraints: BoxConstraints.expand(),
+        body: Container(
+            constraints: BoxConstraints.expand(),
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
@@ -199,7 +199,7 @@ class _trongtranState extends State<trongtran> {
                                     child: Container(
                                         padding:
                                             EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                        child: Text('A',
+                                        child: Text('B',
                                             style: TextStyle(
                                               fontSize: 20,
                                             ))),
@@ -215,7 +215,7 @@ class _trongtranState extends State<trongtran> {
                                     child: Container(
                                         padding:
                                             EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                        child: Text('A',
+                                        child: Text('C',
                                             style: TextStyle(
                                               fontSize: 20,
                                             ))),
@@ -232,7 +232,7 @@ class _trongtranState extends State<trongtran> {
                                     child: Container(
                                         padding:
                                             EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                        child: Text('A',
+                                        child: Text('D',
                                             style: TextStyle(
                                               fontSize: 20,
                                             ))),
