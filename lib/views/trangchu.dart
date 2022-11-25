@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/models/thong_tin_hang.dart';
+import 'package:mauflutter/views/coming_soon.dart';
 // ignore: unused_import
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
@@ -31,7 +32,7 @@ class _trangchuState extends State<trangchu> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   margin: EdgeInsets.only(top: 20),
@@ -208,14 +209,14 @@ class _trangchuState extends State<trangchu> {
                                                                   fontSize: 14),
                                                             ),
                                                             onPressed: () {
-                                                              /* Navigator.push(
+                                                              Navigator.push(
                                                                 context,
                                                                 MaterialPageRoute(
                                                                   builder:
                                                                       ((context) =>
-                                                                          const khung()),
+                                                                          const comingsoon()),
                                                                 ),
-                                                              ); */
+                                                              );
                                                             },
                                                           ),
                                                         ),
@@ -240,14 +241,14 @@ class _trangchuState extends State<trangchu> {
                                                                   fontSize: 10),
                                                             ),
                                                             onPressed: () {
-                                                              /* Navigator.push(
+                                                              Navigator.push(
                                                                 context,
                                                                 MaterialPageRoute(
                                                                   builder:
                                                                       ((context) =>
-                                                                          const khung()),
+                                                                          const comingsoon()),
                                                                 ),
-                                                              ); */
+                                                              );
                                                             },
                                                           ),
                                                         ),
@@ -358,8 +359,8 @@ class _trangchuState extends State<trangchu> {
                 Column(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top: 20, left: 5),
-                      padding: const EdgeInsets.only(left: 13, right: 13),
+                      margin: EdgeInsets.only(top: 20, left: 5),
+                      padding: EdgeInsets.only(left: 6, right: 6),
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("asset/jiuguan4b.png"),
@@ -541,7 +542,14 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op30.png'),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const comingsoon()),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Text('Xếp hạng'),
@@ -556,7 +564,14 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op42.png'),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const comingsoon()),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Text('Trang chủ'),
@@ -571,7 +586,14 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op24.png'),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const comingsoon()),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           const Text('Bạn bè'),
@@ -586,7 +608,14 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op7.png'),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const comingsoon()),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Text('Nạp'),
