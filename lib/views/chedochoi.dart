@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/chonchude.dart';
 import 'package:mauflutter/views/dauxephang.dart';
 import 'package:mauflutter/views/timdoithu.dart';
 import 'package:mauflutter/views/trangchu.dart';
@@ -85,7 +86,7 @@ class _chedochoi extends State<chedochoi> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => const trangchu()),
+                            builder: ((context) => const chonchude()),
                           ),
                         );
                       },

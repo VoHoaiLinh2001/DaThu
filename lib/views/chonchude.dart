@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mauflutter/views/trangchu.dart';
+import 'package:mauflutter/views/trong_tran.dart';
 
 class chonchude extends StatefulWidget {
   const chonchude({super.key});
@@ -66,6 +67,7 @@ class _chonchude extends State<chonchude> {
                 ),
               ),
               Container(
+                padding: EdgeInsets.only(top: 10),
                 child: Column(
                   children: [
                     Container(
@@ -77,7 +79,22 @@ class _chonchude extends State<chonchude> {
                         fit: BoxFit.fill)
                       ),
                       child: Column(children: [
-                        Text('ÂM NHẠC',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                        TextButton(
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const trongtran()),
+                                ),
+                              );
+                            }, 
+                            child: Text('ÂM NHẠC',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                              ),
+                            )
                       ]),
                     )
                   ],
@@ -95,7 +112,22 @@ class _chonchude extends State<chonchude> {
                         fit: BoxFit.fill)
                       ),
                       child: Column(children: [
-                        Text('THỂ THAO',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                        TextButton(
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const trongtran()),
+                                ),
+                              );
+                            }, 
+                            child: Text('THỂ THAO',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                              ),
+                            )
                       ]),
                     )
                   ],
@@ -113,7 +145,22 @@ class _chonchude extends State<chonchude> {
                         fit: BoxFit.fill)
                       ),
                       child: Column(children: [
-                        Text('KHOA HỌC',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                        TextButton(
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const trongtran()),
+                                ),
+                              );
+                            }, 
+                            child: Text('KHOA HOC',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                              ),
+                            )
                       ]),
                     )
                   ],
@@ -130,8 +177,24 @@ class _chonchude extends State<chonchude> {
                         image: DecorationImage(image: AssetImage('asset/TZFB_04.png'),
                         fit: BoxFit.fill)
                       ),
-                      child: Column(children: [
-                        Text('LỊCH SỬ',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const trongtran()),
+                                ),
+                              );
+                            }, 
+                            child: Text('LỊCH SỬ',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                              ),
+                            )
                       ]),
                     )
                   ],
@@ -149,7 +212,22 @@ class _chonchude extends State<chonchude> {
                         fit: BoxFit.fill)
                       ),
                       child: Column(children: [
-                        Text('ĐỊA LÝ',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)
+                        TextButton(
+                            onPressed: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const trongtran()),
+                                ),
+                              );
+                            }, 
+                            child: Text('ĐỊA LÝ',
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                              ),
+                            )
                       ]),
                     )
                   ],
