@@ -20,7 +20,8 @@ class _khung extends State<khung> {
           image: DecorationImage(
               image: AssetImage('asset/denglu_bg.jpg'), fit: BoxFit.fill)),
       child: Container(
-        child: Column(children: [
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Row(
             children: [
               Container(
@@ -34,7 +35,7 @@ class _khung extends State<khung> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) => const thongtin()),
+                        builder: ((context) => const trangchu()),
                       ),
                     );
                   },
@@ -45,7 +46,7 @@ class _khung extends State<khung> {
           Container(
             child: Column(children: [
               Container(
-                width: 500,
+                width: MediaQuery.of(context).size.width,
                 height: 100,
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -66,14 +67,16 @@ class _khung extends State<khung> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 5),
-                height: 750,
-                width: 550,
+                padding: EdgeInsets.only(top: 15, bottom: 15),
+                height: MediaQuery.of(context).size.height -
+                    MediaQuery.of(context).size.height * 0.3,
+                width: MediaQuery.of(context).size.width -
+                    MediaQuery.of(context).size.width * 0.05,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('asset/bg_mianban_zhiban.png'),
                         fit: BoxFit.fill)),
-                child: Column(children: [
+                child: ListView(children: <Widget>[
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -189,6 +192,15 @@ class _khung extends State<khung> {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
+                                      'asset/hero_card_pizhi8_2.png'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 130,
+                          width: 90,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
                                       'asset/hero_card_pizhi8_3.png'),
                                   fit: BoxFit.fill)),
                         ),
@@ -200,7 +212,15 @@ class _khung extends State<khung> {
                                   image: AssetImage(
                                       'asset/hero_card_pizhi8_4.png'),
                                   fit: BoxFit.fill)),
-                        ),
+                        )
+                      ],
+                    ),
+                    padding: EdgeInsets.only(top: 5, left: 10, right: 10),
+                  ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
                         Container(
                           height: 130,
                           width: 90,
@@ -209,14 +229,7 @@ class _khung extends State<khung> {
                                   image: AssetImage(
                                       'asset/hero_card_pizhi8_5.png'),
                                   fit: BoxFit.fill)),
-                        )
-                      ],
-                    ),
-                    padding: EdgeInsets.only(top: 5, left: 10, right: 10),
-                  ),
-                  Container(
-                    child: Row(
-                      children: [
+                        ),
                         Container(
                           height: 130,
                           width: 90,
@@ -234,11 +247,10 @@ class _khung extends State<khung> {
                                   image: AssetImage(
                                       'asset/hero_card_pizhi8_7.png'),
                                   fit: BoxFit.fill)),
-                          margin: EdgeInsets.only(left: 60),
                         ),
                       ],
                     ),
-                    padding: EdgeInsets.only(top: 20, left: 45),
+                    padding: EdgeInsets.only(top: 5, left: 10, right: 10),
                   ),
                 ]),
               )
