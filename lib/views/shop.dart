@@ -122,6 +122,7 @@ class _shop extends State<shop> {
             child: Column(
               children: [
                 Container(
+                  margin: EdgeInsets.only(top: 20, bottom: 0),
                   width: 700,
                   height: 100,
                   decoration: BoxDecoration(
