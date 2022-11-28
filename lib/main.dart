@@ -5,6 +5,7 @@ import 'package:mauflutter/views/dang_ky.dart';
 import 'package:mauflutter/views/dang_nhap.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/services/system_chrome.dart';
+import 'package:mauflutter/views/dauxephang.dart';
 import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/khung.dart';
 import 'package:mauflutter/views/phan_hang.dart';
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: dangnhap(), //asdadasd
+      body: dangnhap(), 
       //dang nhap
     );
   }

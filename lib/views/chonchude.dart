@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/chedochoi.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran.dart';
 
@@ -37,7 +38,7 @@ class _chonchude extends State<chonchude> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: ((context) => const trangchu()),
+                            builder: ((context) => const chedochoi()),
                           ),
                         );
                       },
