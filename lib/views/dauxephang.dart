@@ -17,6 +17,7 @@ class _dauxephang extends State<dauxephang> {
           image: DecorationImage(
               image: AssetImage('asset/battle_map_63.jpg'), fit: BoxFit.fill)),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
             child: Container(
@@ -94,123 +95,125 @@ class _dauxephang extends State<dauxephang> {
               ),
             ),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height / 2.8,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('asset/bg_gaiming.png'),
-                    fit: BoxFit.fill)),
-          ),
-          Container(
-            height: 250,
-            width: 350,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('asset/hd_kapai44.png'),
-                    fit: BoxFit.fill)),
-            child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(top: 5),
-                  child: Text(
-                    'Câu Hỏi',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 50),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('asset/zb_di2.png'),
-                                fit: BoxFit.fill)),
-                        child: Row(
-                          children: [
-                            Text(
-                              'A',
-                              style: TextStyle(fontSize: 20),
+          Column(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height / 2.7,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('asset/bg_gaiming.png'),
+                        fit: BoxFit.fill)),
+              ),
+              Container(
+                height: 255,
+                width: MediaQuery.of(context).size.width * 0.9,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('asset/hd_kapai44.png'),
+                        fit: BoxFit.fill)),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Text('Đáp Án',
+                          style: TextStyle(fontSize: 15, fontFamily: 'MyFont')),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 15, right: 15),
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 50),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('asset/zb_di2.png'),
+                                    fit: BoxFit.fill)),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'A',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 50),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('asset/zb_di2.png'),
-                                fit: BoxFit.fill)),
-                        child: Row(
-                          children: [
-                            Text(
-                              'B',
-                              style: TextStyle(fontSize: 20),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 15, right: 15),
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 50),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('asset/zb_di2.png'),
+                                    fit: BoxFit.fill)),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'B',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 50),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('asset/zb_di2.png'),
-                                fit: BoxFit.fill)),
-                        child: Row(
-                          children: [
-                            Text(
-                              'C',
-                              style: TextStyle(fontSize: 20),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 15, right: 15),
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 50),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('asset/zb_di2.png'),
+                                    fit: BoxFit.fill)),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'C',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 50),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('asset/zb_di2.png'),
-                                fit: BoxFit.fill)),
-                        child: Row(
-                          children: [
-                            Text(
-                              'D',
-                              style: TextStyle(fontSize: 20),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 15, right: 15),
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 50),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('asset/zb_di2.png'),
+                                    fit: BoxFit.fill)),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'D',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                )
-              ],
-            ),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
           Container(
             child: Row(

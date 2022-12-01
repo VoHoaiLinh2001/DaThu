@@ -460,13 +460,16 @@ class _trangchuState extends State<trangchu> {
                         fit: BoxFit.cover),
                   ),
                   child: Container(
-                    padding: EdgeInsets.only(top: 60),
+                    padding: EdgeInsets.only(top: 50),
                     child: TextButton(
                       child: Text(
                         "BXH",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                          color: Colors.red,
+                        ),
                       ),
                       onPressed: () {
                         Navigator.push(

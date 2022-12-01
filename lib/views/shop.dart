@@ -122,7 +122,6 @@ class _shop extends State<shop> {
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 20, bottom: 0),
                   width: 700,
                   height: 100,
                   decoration: BoxDecoration(
@@ -167,7 +166,7 @@ class _shop extends State<shop> {
                 ),
                 Container(
                   width: 500,
-                  height: 600,
+                  height: MediaQuery.of(context).size.height * 0.6,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('asset/bg_mianban_zhiban.png'),
