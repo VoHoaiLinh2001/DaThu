@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mauflutter/models/db_context.dart';
+import 'package:mauflutter/models/db_context_rank.dart';
 import 'package:mauflutter/components/info_frame.dart';
 
 class phanhang extends StatefulWidget {
@@ -135,12 +135,11 @@ class _phanhangState extends State<phanhang> {
                         children: [
                           Text('Bảng xếp hạng',
                               style:
-                                  TextStyle(fontSize: 18, fontFamily: 'MyFont'))
+                                  TextStyle(fontSize: 30, color: Colors.white))
                         ]))
               ])),
               Column(children: [
                 Container(
-                    //shouchonglibao_anniu.png
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("asset/bg_mianban_big2.png"),
@@ -198,10 +197,10 @@ class _phanhangState extends State<phanhang> {
                       ]),
                       Expanded(
                         child: ListView.builder(
-                          itemCount: db_context.items.length,
+                          itemCount: db_context_rank.items.length,
                           itemBuilder: (context, index) {
                             return Info_rank_frame(
-                              info: db_context.items[index],
+                              info: db_context_rank.items[index],
                             );
                           },
                         ),

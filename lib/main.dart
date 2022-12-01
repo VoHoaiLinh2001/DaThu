@@ -8,14 +8,17 @@ import 'package:flutter/src/services/system_chrome.dart';
 import 'package:mauflutter/views/dauxephang.dart';
 import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/khung.dart';
+import 'package:mauflutter/views/lich_su_dau.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/timdoithu.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran.dart';
-import 'package:mauflutter/models/db_context.dart';
+import 'package:mauflutter/models/db_context_rank.dart';
+import 'package:mauflutter/models/db_context_history.dart';
 
 void main() {
-  db_context.createData();
+  db_context_rank.createData();
+  db_context_history.createData();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
@@ -49,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      body: dangnhap(), 
+      body: dangnhap(),
       //dang nhap
     );
   }

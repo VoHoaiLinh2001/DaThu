@@ -4,6 +4,7 @@ import 'package:mauflutter/views/coming_soon.dart';
 // ignore: unused_import
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/views/lich_su_dau.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/shop.dart';
 import 'package:mauflutter/views/trong_tran.dart';
@@ -568,10 +569,17 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op42.png'),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const lichsudau()),
+                                  ),
+                                );
+                              },
                             ),
                           ),
-                          Text('Trang chủ'),
+                          Text('Lịch sử đấu'),
                         ],
                       ),
                     ),
