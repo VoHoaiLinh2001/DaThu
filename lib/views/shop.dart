@@ -16,6 +16,7 @@ class _shop extends State<shop> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+      padding: EdgeInsets.all(5),
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -28,13 +29,15 @@ class _shop extends State<shop> {
               margin: EdgeInsets.only(top: 20),
               height: 50,
               width: 50,
-              decoration: BoxDecoration(
-                image: const DecorationImage(
-                  image: AssetImage('asset/half_347Zz.png'),
-                  fit: BoxFit.cover,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: const DecorationImage(
+                    image: AssetImage('asset/avatar.png'),
+                    fit: BoxFit.cover,
+                  ),
+                  border: Border.all(color: Colors.yellow, width: 2),
+                  borderRadius: BorderRadius.circular(5),
                 ),
-                border: Border.all(color: Colors.yellow, width: 2),
-                borderRadius: BorderRadius.circular(5),
               ),
             ),
             Column(
