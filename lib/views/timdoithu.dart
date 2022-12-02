@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/dauxephang.dart';
 
 class timdoithu extends StatefulWidget {
   const timdoithu({super.key});
@@ -65,13 +66,26 @@ class _timdoithuState extends State<timdoithu> {
                   ),
                   Center(
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 4.0,
-                      height: MediaQuery.of(context).size.width / 4.0,
-                      child: Image(
-                        image: AssetImage('asset/kiem.png'),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                        width: MediaQuery.of(context).size.width / 4.0,
+                        height: MediaQuery.of(context).size.width / 4.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('asset/kiem.png'),
+                              fit: BoxFit.fill),
+                        ),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => const dauxephang()),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            '',
+                          ),
+                        )),
                   ),
                 ],
               ),
