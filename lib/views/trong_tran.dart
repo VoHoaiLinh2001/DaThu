@@ -91,8 +91,7 @@ class _trongtranState extends State<trongtran> {
                     image: AssetImage('asset/khung.png'), fit: BoxFit.fill),
               ),
               child: Container(
-                height: (MediaQuery.of(context).size.height) -
-                    ((MediaQuery.of(context).size.height) * 0.18),
+                height: (MediaQuery.of(context).size.height) * 0.83,
                 child: Column(
                   children: [
                     Row(
@@ -109,7 +108,7 @@ class _trongtranState extends State<trongtran> {
                       ],
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height / 2.2,
+                      height: MediaQuery.of(context).size.height / 2.4,
                       width: MediaQuery.of(context).size.width / 1.1,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
@@ -189,98 +188,111 @@ class _trongtranState extends State<trongtran> {
                           children: [
                             Text('Đáp án',
                                 style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'MyFont'),
+                                    fontSize: 25, fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.center),
-                            Container(
-                              width: 270,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('asset/zb_di2.png'),
-                                    fit: BoxFit.fill),
-                              ),
-                              child: TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: ((context) => const ketthuc()),
+                            Column(children: [
+                              Container(
+                                width: 270,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('asset/zb_di2.png'),
+                                      fit: BoxFit.fill),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: ((context) => const ketthuc()),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    'A',
+                                    style: TextStyle(
+                                      fontSize: 20,
                                     ),
-                                  );
-                                },
-                                child: Text(
-                                  'A',
-                                  style: TextStyle(
-                                    fontSize: 20,
                                   ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              width: 270,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('asset/zb_di2.png'),
-                                    fit: BoxFit.fill),
-                              ),
-                              child: TextButton(
-                                // padding: EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: ((context) => const ketthuc()),
+                              Container(
+                                width: 270,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('asset/zb_di2.png'),
+                                      fit: BoxFit.fill),
+                                ),
+                                child: TextButton(
+                                  // padding: EdgeInsets.fromLTRB(55, 13, 0, 0),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: ((context) => const ketthuc()),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    'B',
+                                    style: TextStyle(
+                                      fontSize: 20,
                                     ),
-                                  );
-                                },
-                                child: Text(
-                                  'B',
-                                  style: TextStyle(
-                                    fontSize: 20,
                                   ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              width: 270,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('asset/zb_di2.png'),
-                                    fit: BoxFit.fill),
-                              ),
-                              child: Container(
-                                padding: EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                child: Text(
-                                  'C',
-                                  style: TextStyle(
-                                    fontSize: 20,
+                              Container(
+                                width: 270,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('asset/zb_di2.png'),
+                                      fit: BoxFit.fill),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: ((context) => const ketthuc()),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    'C',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(bottom: 5),
-                              width: 270,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('asset/zb_di2.png'),
-                                    fit: BoxFit.fill),
-                              ),
-                              child: Container(
-                                padding: EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                child: Text(
-                                  'D',
-                                  style: TextStyle(
-                                    fontSize: 20,
+                              Container(
+                                width: 270,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('asset/zb_di2.png'),
+                                      fit: BoxFit.fill),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: ((context) => const ketthuc()),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    'D',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
+                            ]),
                           ],
                         ),
                       ),
