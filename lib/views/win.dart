@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/timdoithu.dart';
+import 'package:mauflutter/views/trangchu.dart';
 
 class win extends StatefulWidget {
   const win({super.key});
@@ -126,7 +128,53 @@ class _win extends State<win> {
                           fontSize: 100,
                           color: Colors.white),
                     ),
-                  )
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('asset/nut.png'))),
+                          child: TextButton(
+                            child: Text('Trang Chủ',
+                                style: TextStyle(color: Colors.white),
+                                textAlign: TextAlign.center),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const trangchu()),
+                                ),
+                              );
+                            },
+                          ),
+                          padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('asset/nut.png'))),
+                          child: TextButton(
+                            child: Text('Chơi Lại',
+                                style: TextStyle(color: Colors.white),
+                                textAlign: TextAlign.center),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: ((context) => const timdoithu()),
+                                ),
+                              );
+                            },
+                          ),
+                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
