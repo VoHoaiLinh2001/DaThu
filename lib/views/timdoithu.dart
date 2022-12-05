@@ -35,7 +35,7 @@ class _timdoithuState extends State<timdoithu> {
             Container(
               child: Text(
                 'Đấu Xếp Hạng',
-                style: TextStyle(fontSize: 50),
+                style: TextStyle(fontSize: 50, color: Colors.white),
               ),
             ),
             Container(

@@ -1,6 +1,6 @@
 import 'thong_tin_hang.dart';
 
-class db_context {
+class db_context_rank {
   static List<Info> items = List.filled(
     0,
     Info(
