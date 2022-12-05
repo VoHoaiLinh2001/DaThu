@@ -530,17 +530,10 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op42.png'),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: ((context) => const lichsudau()),
-                                  ),
-                                );
-                              },
+                              onPressed: () {},
                             ),
                           ),
-                          Text('Lịch sử đấu'),
+                          const Text('Trang chủ'),
                         ],
                       ),
                     ),
