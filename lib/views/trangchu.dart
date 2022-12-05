@@ -49,7 +49,7 @@ class _trangchuState extends State<trangchu> {
                   height: 210,
                   width: 231,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("asset/Untitled-2.png"),
                       fit: BoxFit.cover,
                     ),
@@ -94,7 +94,7 @@ class _trangchuState extends State<trangchu> {
                       Container(
                         margin: EdgeInsets.only(left: 55),
                         padding: EdgeInsets.only(right: 5, bottom: 20),
-                        child: Text(
+                        child: const Text(
                           'Id:0123456',
                           style: TextStyle(fontSize: 16),
                         ),
@@ -343,7 +343,7 @@ class _trangchuState extends State<trangchu> {
                                 AssetImage("asset/huanpi_gongyong_anniu_0.png"),
                             fit: BoxFit.cover),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Cảnh giới',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
@@ -354,7 +354,7 @@ class _trangchuState extends State<trangchu> {
                   width: 60,
                   height: 60,
                   margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  child: Image(
+                  child: const Image(
                     image: AssetImage('asset/icon_duanwei_06.png'),
                   ),
                 ),
@@ -373,7 +373,7 @@ class _trangchuState extends State<trangchu> {
                                 fit: BoxFit.cover),
                           ),
                         ),
-                        Text(
+                        const Text(
                           '123456',
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         )
@@ -404,7 +404,7 @@ class _trangchuState extends State<trangchu> {
             Container(
               width: MediaQuery.of(context).size.width / 1.2,
               height: 250,
-              child: Image(
+              child: const Image(
                   image: AssetImage(
                     "asset/half_306.png",
                   ),
@@ -424,7 +424,7 @@ class _trangchuState extends State<trangchu> {
                   child: Container(
                     padding: EdgeInsets.only(top: 50),
                     child: TextButton(
-                      child: Text(
+                      child: const Text(
                         "BXH",
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -496,7 +496,7 @@ class _trangchuState extends State<trangchu> {
                               },
                             ),
                           ),
-                          Text('Shop'),
+                          const Text('Shop'),
                         ],
                       ),
                     ),
@@ -518,7 +518,7 @@ class _trangchuState extends State<trangchu> {
                               },
                             ),
                           ),
-                          Text('Xếp hạng'),
+                          const Text('Xếp hạng'),
                         ],
                       ),
                     ),
@@ -577,7 +577,7 @@ class _trangchuState extends State<trangchu> {
                               },
                             ),
                           ),
-                          Text('Nạp'),
+                          const Text('Nạp'),
                         ],
                       ),
                     ),
