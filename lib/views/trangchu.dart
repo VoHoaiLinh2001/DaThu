@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/models/thong_tin_hang.dart';
 import 'package:mauflutter/views/coming_soon.dart';
-// ignore: unused_import
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/lich_su_dau.dart';

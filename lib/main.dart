@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/ban_be.dart';
 import 'package:mauflutter/views/chedochoi.dart';
 import 'package:mauflutter/views/chonchude.dart';
 import 'package:mauflutter/views/dang_ky.dart';
@@ -15,10 +16,12 @@ import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran.dart';
 import 'package:mauflutter/models/db_context_rank.dart';
 import 'package:mauflutter/models/db_context_history.dart';
+import 'package:mauflutter/models/db_context_ban_be.dart';
 
 void main() {
   db_context_rank.createData();
   db_context_history.createData();
+  db_context_ban_be.createData();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
