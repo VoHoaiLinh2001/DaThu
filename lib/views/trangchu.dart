@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/models/thong_tin_hang.dart';
+import 'package:mauflutter/views/ban_be.dart';
 import 'package:mauflutter/views/coming_soon.dart';
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/ketthuc.dart';
@@ -548,7 +549,7 @@ class _trangchuState extends State<trangchu> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const comingsoon()),
+                                    builder: ((context) => const banbe()),
                                   ),
                                 );
                               },

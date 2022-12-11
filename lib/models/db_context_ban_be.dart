@@ -8,6 +8,8 @@ class db_context_ban_be {
       name: '',
       current_ranking: '',
       icon_chat: '',
+      icon_cancel: '',
+      icon_accept: '',
     ),
     growable: true,
   );
@@ -17,36 +19,48 @@ class db_context_ban_be {
       name: 'Pro Player 1',
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
+      icon_cancel: 'asset/cancel.png',
+      icon_accept: 'asset/accept1.png',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
       name: 'Pro Player 2',
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
+      icon_cancel: 'asset/cancel.png',
+      icon_accept: 'asset/accept1.png',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
       name: 'Pro Player 3',
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
+      icon_cancel: 'asset/cancel.png',
+      icon_accept: 'asset/accept1.png',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
       name: 'Pro Player 4',
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
+      icon_cancel: 'asset/cancel.png',
+      icon_accept: 'asset/accept1.png',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
       name: 'Pro Player 5',
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
+      icon_cancel: 'asset/cancel.png',
+      icon_accept: 'asset/accept1.png',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
       name: 'Pro Player 6',
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
+      icon_cancel: 'asset/cancel.png',
+      icon_accept: 'asset/accept1.png',
     ));
   }
 }

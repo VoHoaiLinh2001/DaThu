@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mauflutter/models/thong_tin_ban_be.dart';
+import 'package:mauflutter/models/thong_tin_hang.dart';
 
-class Thong_tin_ban_be_frame extends StatefulWidget {
-  Thong_tin_ban_be_frame({super.key, required this.thong_tin_ban_be});
-  final Thong_tin_ban_be thong_tin_ban_be;
+class Info_canh_gioi_frame extends StatefulWidget {
+  Info_canh_gioi_frame({super.key, required this.info});
+  final Info info;
   @override
-  State<Thong_tin_ban_be_frame> createState() => _Thong_tin_ban_be_State();
+  State<Info_canh_gioi_frame> createState() => _Info_canh_gioi_State();
 }
 
-class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
+class _Info_canh_gioi_State extends State<Info_canh_gioi_frame> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +20,7 @@ class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
         )),
         child: Row(children: [
           Expanded(
-              flex: 5,
+              flex: 3,
               child: Row(children: [
                 Container(
                     margin: EdgeInsets.only(top: 12, left: 20),
@@ -31,7 +31,7 @@ class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Image.asset(
-                      widget.thong_tin_ban_be.avatar,
+                      widget.info.avatar,
                       width: 22,
                       fit: BoxFit.cover,
                     )),
@@ -44,7 +44,7 @@ class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
                             image: AssetImage("asset/jiuguan4b.png"),
                             fit: BoxFit.fill),
                       ),
-                      child: Text(widget.thong_tin_ban_be.name,
+                      child: Text(widget.info.name,
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 16, color: Colors.white))),
                   Container(
@@ -56,21 +56,18 @@ class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
                                 AssetImage("asset/huanpi_gongyong_anniu_0.png"),
                             fit: BoxFit.cover),
                       ),
-                      child: Text(widget.thong_tin_ban_be.current_ranking,
+                      child: Text(widget.info.current_ranking,
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 16, color: Colors.white))),
                 ])
               ])),
           Expanded(
-              flex: 3,
               child: Row(children: [
-                Container(
-                    margin: EdgeInsets.only(top: 12),
-                    child: Image(
-                        width: 100,
-                        height: 68,
-                        image: AssetImage(widget.thong_tin_ban_be.icon_chat))),
-              ])),
+            Container(
+                margin: EdgeInsets.only(left: 0, top: 10),
+                child: Text(widget.info.current_ranking_number,
+                    style: TextStyle(fontSize: 50, color: Colors.red)))
+          ])),
         ]));
   }
 }

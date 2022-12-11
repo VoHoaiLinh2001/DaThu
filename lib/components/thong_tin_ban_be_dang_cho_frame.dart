@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mauflutter/models/thong_tin_ban_be.dart';
 
-class Thong_tin_ban_be_frame extends StatefulWidget {
-  Thong_tin_ban_be_frame({super.key, required this.thong_tin_ban_be});
+class Thong_tin_ban_be_dang_cho_frame extends StatefulWidget {
+  Thong_tin_ban_be_dang_cho_frame({super.key, required this.thong_tin_ban_be});
   final Thong_tin_ban_be thong_tin_ban_be;
   @override
-  State<Thong_tin_ban_be_frame> createState() => _Thong_tin_ban_be_State();
+  State<Thong_tin_ban_be_dang_cho_frame> createState() =>
+      _Thong_tin_ban_be_dang_cho_State();
 }
 
-class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
+class _Thong_tin_ban_be_dang_cho_State
+    extends State<Thong_tin_ban_be_dang_cho_frame> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +22,7 @@ class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
         )),
         child: Row(children: [
           Expanded(
-              flex: 5,
+              flex: 3,
               child: Row(children: [
                 Container(
                     margin: EdgeInsets.only(top: 12, left: 20),
@@ -62,15 +64,22 @@ class _Thong_tin_ban_be_State extends State<Thong_tin_ban_be_frame> {
                 ])
               ])),
           Expanded(
-              flex: 3,
-              child: Row(children: [
-                Container(
-                    margin: EdgeInsets.only(top: 12),
-                    child: Image(
-                        width: 100,
-                        height: 68,
-                        image: AssetImage(widget.thong_tin_ban_be.icon_chat))),
-              ])),
+            flex: 2,
+            child: Row(children: [
+              Container(
+                  margin: EdgeInsets.only(top: 12),
+                  child: Image(
+                      width: 60,
+                      height: 60,
+                      image: AssetImage(widget.thong_tin_ban_be.icon_cancel))),
+              Container(
+                  margin: EdgeInsets.only(top: 12),
+                  child: Image(
+                      width: 60,
+                      height: 60,
+                      image: AssetImage(widget.thong_tin_ban_be.icon_accept))),
+            ]),
+          ),
         ]));
   }
 }
