@@ -24,10 +24,12 @@ class _trangchuState extends State<trangchu> {
   Widget popupmenu() {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
-            margin: EdgeInsets.only(top: 5),
-            width: 300,
+            //margin: EdgeInsets.only(top: 5),
+            width: 340,
+            height: 650,
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("asset/buff_kuang.png"), fit: BoxFit.fill),
@@ -35,15 +37,19 @@ class _trangchuState extends State<trangchu> {
             child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 20),
-                  //child: Text('Tên người chơi'),
+                  margin: EdgeInsets.only(top: 25),
+                  //padding: EdgeInsets.only(top: 15),
+                  child: const Text(
+                    'Tên người chơi',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 29),
-                  height: 147,
-                  width: 176,
+                  margin: EdgeInsets.only(top: 50),
+                  height: 210,
+                  width: 231,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("asset/Untitled-2.png"),
                       fit: BoxFit.cover,
                     ),
@@ -60,39 +66,35 @@ class _trangchuState extends State<trangchu> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 5),
+                  margin: EdgeInsets.only(top: 10),
                   padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("asset/huanpi_gongyong_anniu_0.png"),
                         fit: BoxFit.fill),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Đổi Avatar',
+                    textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.only(top: 30),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 15),
-                        padding: EdgeInsets.only(left: 20, right: 20),
-                        child: Text(
+                        padding: EdgeInsets.only(left: 10, bottom: 20),
+                        child: const Text(
                           'Cảnh giới',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
-                      /*Container(
-                            child: Image(
-                                width: 30,
-                                height: 30,
-                                image: AssetImage(
-                                    'asset/migong_chuansongmen2.png')) /*migong_chuansongmen2.png*/),*/
                       Container(
-                        margin: EdgeInsets.only(top: 15, left: 55),
-                        //padding: EdgeInsets.only(left: 20, right: 20),
-                        child: Text(
+                        margin: EdgeInsets.only(left: 55),
+                        padding: EdgeInsets.only(right: 5, bottom: 20),
+                        child: const Text(
                           'Id:0123456',
                           style: TextStyle(fontSize: 16),
                         ),
@@ -101,23 +103,31 @@ class _trangchuState extends State<trangchu> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 10),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         child: Expanded(
                           child: Column(
                             children: [
-                              Text('Mức rank'),
+                              const Text(
+                                'Mức rank',
+                                style: TextStyle(fontSize: 16),
+                              ),
                               Container(
-                                  width: 50,
-                                  height: 50,
-                                  margin: EdgeInsets.only(top: 5, bottom: 5),
-                                  child: Image(
-                                    image:
-                                        AssetImage('asset/icon_duanwei_06.png'),
-                                  )),
-                              Text('Tên rank'),
+                                width: 50,
+                                height: 50,
+                                margin:
+                                    const EdgeInsets.only(top: 5, bottom: 5),
+                                child: const Image(
+                                  image:
+                                      AssetImage('asset/icon_duanwei_06.png'),
+                                ),
+                              ),
+                              const Text(
+                                'Tên rank',
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ],
                           ),
                         ),
@@ -127,52 +137,88 @@ class _trangchuState extends State<trangchu> {
                           child: Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                                width: 150,
+                                height: 40,
+                                margin: EdgeInsets.only(top: 10),
+                                padding: EdgeInsets.fromLTRB(30, 10, 30, 5),
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
                                           "asset/huanpi_gongyong_anniu_0.png"),
                                       fit: BoxFit.fill),
                                 ),
-                                child: Text(
+                                child: const Text(
                                   'Âm nhạc',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: 150,
+                                height: 40,
+                                padding: EdgeInsets.fromLTRB(13, 10, 13, 5),
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "asset/huanpi_gongyong_anniu_0.png"),
+                                      fit: BoxFit.fill),
+                                ),
+                                child: const Text(
+                                  'Hiệu ứng',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 14),
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(top: 5, bottom: 5),
-                                padding: EdgeInsets.fromLTRB(13, 10, 13, 10),
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          "asset/huanpi_gongyong_anniu_0.png"),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: Text(
-                                  'Hiệu ứng âm thanh',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 11),
-                                ),
-                              ),
-                              Container(
-                                height: 35,
+                                width: 150,
+                                height: 40,
                                 decoration: const BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
                                             "asset/huanpi_gongyong_anniu_0.png"),
                                         fit: BoxFit.fill)),
                                 child: TextButton(
-                                  child: Text(
+                                  child: const Text(
                                     'Chọn khung',
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 10),
+                                        color: Colors.white, fontSize: 14),
                                   ),
                                   onPressed: () {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                         builder: ((context) => const khung()),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
+                              Container(
+                                width: 150,
+                                height: 40,
+                                decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "asset/huanpi_gongyong_anniu_0.png"),
+                                        fit: BoxFit.fill)),
+                                child: TextButton(
+                                  child: const Text(
+                                    'Lịch sử đấu',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 14),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: ((context) =>
+                                            const lichsudau()),
                                       ),
                                     );
                                   },
@@ -186,18 +232,16 @@ class _trangchuState extends State<trangchu> {
                   ),
                 ),
                 Container(
-                  //padding: EdgeInsets.only(top: 5),
+                  margin: EdgeInsets.only(top: 2),
                   height: 50,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                          //margin: EdgeInsets.only(left: 30),
-                          //margin: EdgeInsets.only(left: 5),
-                          ),
-                      Container(
+                        width: 200,
+                        height: 150,
                         margin: EdgeInsets.only(left: 20),
-                        padding: EdgeInsets.fromLTRB(20, 10, 20, 5),
+                        padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image:
@@ -206,11 +250,13 @@ class _trangchuState extends State<trangchu> {
                           ),
                         ),
                         child: TextButton(
-                          child: Text(
+                          child: const Text(
                             'Đăng xuất',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: Colors.white, fontFamily: 'MyFont'),
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontFamily: 'MyFont'),
                           ),
                           onPressed: () {
                             Navigator.push(
@@ -224,7 +270,7 @@ class _trangchuState extends State<trangchu> {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -297,7 +343,7 @@ class _trangchuState extends State<trangchu> {
                                 AssetImage("asset/huanpi_gongyong_anniu_0.png"),
                             fit: BoxFit.cover),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Cảnh giới',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
@@ -308,7 +354,7 @@ class _trangchuState extends State<trangchu> {
                   width: 60,
                   height: 60,
                   margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  child: Image(
+                  child: const Image(
                     image: AssetImage('asset/icon_duanwei_06.png'),
                   ),
                 ),
@@ -327,7 +373,7 @@ class _trangchuState extends State<trangchu> {
                                 fit: BoxFit.cover),
                           ),
                         ),
-                        Text(
+                        const Text(
                           '123456',
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         )
@@ -358,7 +404,7 @@ class _trangchuState extends State<trangchu> {
             Container(
               width: MediaQuery.of(context).size.width / 1.2,
               height: 250,
-              child: Image(
+              child: const Image(
                   image: AssetImage(
                     "asset/half_306.png",
                   ),
@@ -378,7 +424,7 @@ class _trangchuState extends State<trangchu> {
                   child: Container(
                     padding: EdgeInsets.only(top: 50),
                     child: TextButton(
-                      child: Text(
+                      child: const Text(
                         "BXH",
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -450,7 +496,7 @@ class _trangchuState extends State<trangchu> {
                               },
                             ),
                           ),
-                          Text('Shop'),
+                          const Text('Shop'),
                         ],
                       ),
                     ),
@@ -472,7 +518,7 @@ class _trangchuState extends State<trangchu> {
                               },
                             ),
                           ),
-                          Text('Xếp hạng'),
+                          const Text('Xếp hạng'),
                         ],
                       ),
                     ),
@@ -484,17 +530,10 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op42.png'),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: ((context) => const lichsudau()),
-                                  ),
-                                );
-                              },
+                              onPressed: () {},
                             ),
                           ),
-                          Text('Lịch sử đấu'),
+                          const Text('Trang chủ'),
                         ],
                       ),
                     ),
@@ -538,7 +577,7 @@ class _trangchuState extends State<trangchu> {
                               },
                             ),
                           ),
-                          Text('Nạp'),
+                          const Text('Nạp'),
                         ],
                       ),
                     ),
