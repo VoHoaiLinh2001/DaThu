@@ -1,8 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mauflutter/views/dang_ky.dart';
-// ignore: unused_import
 import 'package:mauflutter/views/info.dart';
 import 'package:mauflutter/views/trangchu.dart';
+import 'package:mauflutter/main.dart';
 
 class dangnhap extends StatefulWidget {
   const dangnhap({super.key});
@@ -13,7 +14,15 @@ class dangnhap extends StatefulWidget {
 
 class _dangnhapState extends State<dangnhap> {
   bool checkBoxValue = false;
+  final EmailController = TextEditingController();
+  final PasswordController = TextEditingController();
   @override
+  void dispose() {
+    EmailController.dispose();
+    PasswordController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -47,6 +56,8 @@ class _dangnhapState extends State<dangnhap> {
                         border: OutlineInputBorder(),
                         labelText: 'Email',
                       ),
+                      controller: EmailController,
+                      textInputAction: TextInputAction.next,
                     ),
                   ),
                   Container(
@@ -57,6 +68,8 @@ class _dangnhapState extends State<dangnhap> {
                         border: OutlineInputBorder(),
                         labelText: 'Mật khẩu',
                       ),
+                      controller: PasswordController,
+                      textInputAction: TextInputAction.done,
                     ),
                   ),
                 ],
@@ -100,14 +113,7 @@ class _dangnhapState extends State<dangnhap> {
                             color: Colors.black,
                           ),
                         ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: ((context) => const trangchu()),
-                            ),
-                          );
-                        },
+                        onPressed: signIn,
                       ),
                     ),
                     Container(
@@ -175,5 +181,23 @@ class _dangnhapState extends State<dangnhap> {
         ]),
       ),
     );
+  }
+
+  Future signIn() async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => Center(child: CircularProgressIndicator()),
+    );
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: EmailController.text.trim(),
+        password: PasswordController.text.trim(),
+      );
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }

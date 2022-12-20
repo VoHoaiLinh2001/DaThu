@@ -1,4 +1,8 @@
+import 'package:email_validator/email_validator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mauflutter/main.dart';
+import 'package:mauflutter/views/Utils.dart';
 import 'package:mauflutter/views/dang_nhap.dart';
 
 class dangky extends StatefulWidget {
@@ -9,6 +13,16 @@ class dangky extends StatefulWidget {
 }
 
 class _dangkyState extends State<dangky> {
+  final EmailController = TextEditingController();
+  final PasswordController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  @override
+  void dispose() {
+    EmailController.dispose();
+    PasswordController.dispose();
+    super.dispose();
+  }
+
   bool _showpass = false;
   bool isChecked = false;
   void ShowPass() {
@@ -41,31 +55,46 @@ class _dangkyState extends State<dangky> {
                     margin: EdgeInsets.only(top: 200),
                   ),
                 ),
-                Container(
+                Form(
+                  key: formKey,
                   child: Column(
                     children: [
                       Column(
                         children: [
                           Container(
                             padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
-                            child: TextField(
+                            child: TextFormField(
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Email',
                               ),
+                              controller: EmailController,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
+                              validator: (email) => email != null &&
+                                      EmailValidator.validate(email)
+                                  ? null
+                                  : 'Vui lòng nhập email hợp lệ',
                             ),
                           ),
                           Container(
                             padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
-                            child: TextField(
+                            child: TextFormField(
                               obscureText: true,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Mật khẩu',
                               ),
+                              controller: PasswordController,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
+                              validator: (value) =>
+                                  value != null && value.length < 8
+                                      ? 'Mật khẩu phải trên 8 ký tự'
+                                      : null,
                             ),
                           ),
-                          Container(
+                          /* Container(
                             padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
                             child: TextField(
                               obscureText: true,
@@ -74,7 +103,7 @@ class _dangkyState extends State<dangky> {
                                 labelText: 'Nhập Lại Mật khẩu',
                               ),
                             ),
-                          ),
+                          ), */
                         ],
                       ),
                       Row(
@@ -152,7 +181,7 @@ class _dangkyState extends State<dangky> {
                                     color: Colors.black,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: sinUp,
                               ),
                             ),
                           ],
@@ -165,5 +194,24 @@ class _dangkyState extends State<dangky> {
             ),
           ])),
     );
+  }
+
+  Future sinUp() async {
+    final isValid = formKey.currentState!.validate();
+    if (!isValid) return;
+
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => Center(child: CircularProgressIndicator()));
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: EmailController.text.trim(),
+        password: PasswordController.text.trim(),
+      );
+    } on FirebaseAuthException catch (e) {
+      Utils.showSnackBar('Email đã được sử dụng');
+    }
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }

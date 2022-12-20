@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mauflutter/models/thong_tin_hang.dart';
 import 'package:mauflutter/views/ban_be.dart';
@@ -8,7 +9,6 @@ import 'package:mauflutter/views/lich_su_dau.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/shop.dart';
 import 'package:mauflutter/views/trong_tran.dart';
-
 import 'chedochoi.dart';
 import 'dang_nhap.dart';
 import 'khung.dart';
@@ -231,7 +231,7 @@ class _trangchuState extends State<trangchu> {
                     ],
                   ),
                 ),
-                Container(
+                /* Container(
                   margin: EdgeInsets.only(top: 2),
                   height: 50,
                   child: Row(
@@ -250,27 +250,21 @@ class _trangchuState extends State<trangchu> {
                           ),
                         ),
                         child: TextButton(
-                          child: const Text(
-                            'Đăng xuất',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontFamily: 'MyFont'),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: ((context) => const dangnhap()),
-                              ),
-                            );
-                          },
-                        ),
+                            child: const Text(
+                              'Đăng xuất',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontFamily: 'MyFont'),
+                            ),
+                            onPressed: () => {
+                                  FirebaseAuth.instance.signOut(),
+                                }),
                       ),
                     ],
                   ),
-                ),
+                ), */
               ],
             ),
           ),
@@ -281,6 +275,7 @@ class _trangchuState extends State<trangchu> {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(5),
@@ -530,10 +525,12 @@ class _trangchuState extends State<trangchu> {
                           Container(
                             child: IconButton(
                               icon: Image.asset('asset/icon_op42.png'),
-                              onPressed: () {},
+                              onPressed: () => {
+                                FirebaseAuth.instance.signOut(),
+                              },
                             ),
                           ),
-                          const Text('Trang chủ'),
+                          const Text('Đăng xuất'),
                         ],
                       ),
                     ),
