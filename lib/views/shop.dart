@@ -44,15 +44,15 @@ class _shop extends State<shop> {
               children: [
                 Container(
                   margin: EdgeInsets.only(top: 20, left: 5),
-                  padding: EdgeInsets.only(left: 15, right: 15),
+                  padding: EdgeInsets.only(left: 6, right: 6),
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("asset/jiuguan4b.png"),
                         fit: BoxFit.cover),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Doãn Chí Bình',
-                    style: const TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
                 Container(
@@ -63,7 +63,7 @@ class _shop extends State<shop> {
                         image: AssetImage("asset/huanpi_gongyong_anniu_0.png"),
                         fit: BoxFit.cover),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Cảnh giới',
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
@@ -74,7 +74,7 @@ class _shop extends State<shop> {
               width: 60,
               height: 60,
               margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-              child: Image(
+              child: const Image(
                 image: AssetImage('asset/icon_duanwei_06.png'),
               ),
             ),
@@ -89,11 +89,11 @@ class _shop extends State<shop> {
                       padding: EdgeInsets.only(left: 10, right: 10),
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("asset/vang.png"),
+                            image: AssetImage("asset/icon_dian1.png"),
                             fit: BoxFit.cover),
                       ),
                     ),
-                    Text(
+                    const Text(
                       '123456',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     )
@@ -107,7 +107,7 @@ class _shop extends State<shop> {
                       padding: EdgeInsets.only(left: 10, right: 10),
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("asset/bac.png"),
+                            image: AssetImage("asset/icon_dian0.png"),
                             fit: BoxFit.cover),
                       ),
                     ),

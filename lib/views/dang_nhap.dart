@@ -1,7 +1,10 @@
+import 'dart:ui';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mauflutter/views/Utils.dart';
 import 'package:mauflutter/views/dang_ky.dart';
 import 'package:mauflutter/views/info.dart';
+import 'package:mauflutter/views/quen_mat_khau.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/main.dart';
 
@@ -36,21 +39,40 @@ class _dangnhapState extends State<dangnhap> {
         ),
         child: ListView(children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Expanded(
                 flex: 0,
                 child: Container(
                   child: Text(
-                    'Đăng Nhập',
-                    style: TextStyle(fontSize: 30),
+                    'ĐĂNG NHẬP',
+                    style: TextStyle(
+                        fontSize: 55,
+                        shadows: [
+                          Shadow(
+                            color: Colors.red,
+                            blurRadius: 10.0,
+                            offset: Offset(2, 2),
+                          )
+                        ],
+                        foreground: Paint()
+                          ..shader = LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 30, 26, 163),
+                              Color.fromARGB(255, 7, 84, 10),
+                              Color.fromARGB(255, 86, 90, 3),
+                            ],
+                          ).createShader(
+                            Rect.fromLTWH(0, 0, 400, 20),
+                          )),
                   ),
-                  margin: EdgeInsets.only(top: 200),
+                  margin: EdgeInsets.only(top: 100),
                 ),
               ),
               Column(
                 children: [
                   Container(
-                    padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                     child: TextField(
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
@@ -61,7 +83,7 @@ class _dangnhapState extends State<dangnhap> {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                     child: TextField(
                       obscureText: true,
                       decoration: const InputDecoration(
@@ -102,16 +124,26 @@ class _dangnhapState extends State<dangnhap> {
                             ),
                             fit: BoxFit.cover),
                       ),
-                      width: 140,
+                      width: 150,
                       height: 50,
                       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                       child: TextButton(
-                        child: const Text(
-                          'Đăng nhập',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.lock_open,
+                              color: Colors.black,
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Đăng nhập',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
                         onPressed: signIn,
                       ),
@@ -129,12 +161,22 @@ class _dangnhapState extends State<dangnhap> {
                       height: 50,
                       padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                       child: TextButton(
-                        child: const Text(
-                          'Đăng ký',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.arrow_forward,
+                              color: Colors.black,
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Đăng ký',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -149,6 +191,17 @@ class _dangnhapState extends State<dangnhap> {
                   ],
                 ),
               ),
+              SizedBox(height: 10),
+              GestureDetector(
+                  child: Text(
+                    'Quên mật khẩu?',
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Color.fromARGB(255, 19, 99, 237)),
+                  ),
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => quen_mat_khau(),
+                      ))),
               Container(
                 child: Column(
                   children: [
@@ -195,7 +248,7 @@ class _dangnhapState extends State<dangnhap> {
         password: PasswordController.text.trim(),
       );
     } on FirebaseAuthException catch (e) {
-      print(e);
+      Utils.showSnackBar('Tài khoản không tồn tại');
     }
 
     navigatorKey.currentState!.popUntil((route) => route.isFirst);

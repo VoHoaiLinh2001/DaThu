@@ -38,16 +38,18 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        scaffoldMessengerKey: Utils.messengerKey,
-        navigatorKey: navigatorKey,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        debugShowCheckedModeBanner: false,
-        home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      );
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      scaffoldMessengerKey: Utils.messengerKey,
+      navigatorKey: navigatorKey,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
 }
 
 class MyHomePage extends StatefulWidget {

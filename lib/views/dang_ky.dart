@@ -49,10 +49,28 @@ class _dangkyState extends State<dangky> {
                   flex: 0,
                   child: Container(
                     child: Text(
-                      'Đăng Ký',
-                      style: TextStyle(fontSize: 30),
+                      'ĐĂNG KÝ',
+                      style: TextStyle(
+                          fontSize: 55,
+                          shadows: [
+                            Shadow(
+                              color: Colors.red,
+                              blurRadius: 10.0,
+                              offset: Offset(2, 2),
+                            )
+                          ],
+                          foreground: Paint()
+                            ..shader = LinearGradient(
+                              colors: [
+                                Color.fromARGB(255, 30, 26, 163),
+                                Color.fromARGB(255, 7, 84, 10),
+                                Color.fromARGB(255, 86, 90, 3),
+                              ],
+                            ).createShader(
+                              Rect.fromLTWH(0, 0, 400, 20),
+                            )),
                     ),
-                    margin: EdgeInsets.only(top: 200),
+                    margin: EdgeInsets.only(top: 100),
                   ),
                 ),
                 Form(
@@ -62,7 +80,7 @@ class _dangkyState extends State<dangky> {
                       Column(
                         children: [
                           Container(
-                            padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
+                            padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                             child: TextFormField(
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
@@ -78,7 +96,7 @@ class _dangkyState extends State<dangky> {
                             ),
                           ),
                           Container(
-                            padding: const EdgeInsets.fromLTRB(75, 10, 75, 0),
+                            padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                             child: TextFormField(
                               obscureText: true,
                               decoration: const InputDecoration(
@@ -144,12 +162,22 @@ class _dangkyState extends State<dangky> {
                               height: 50,
                               padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                               child: TextButton(
-                                child: const Text(
-                                  'Đăng nhập',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.black,
-                                  ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.lock_open,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(width: 5),
+                                    Text(
+                                      'Đăng nhập',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                                 onPressed: () {
                                   Navigator.push(
@@ -174,12 +202,22 @@ class _dangkyState extends State<dangky> {
                               height: 50,
                               padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                               child: TextButton(
-                                child: const Text(
-                                  'Đăng ký',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.black,
-                                  ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.arrow_forward,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(width: 5),
+                                    Text(
+                                      'Đăng ký',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                                 onPressed: sinUp,
                               ),
