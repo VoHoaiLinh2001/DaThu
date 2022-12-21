@@ -75,8 +75,8 @@ class _Thong_tin_ban_be_dang_cho_State
               Container(
                   margin: EdgeInsets.only(top: 12),
                   child: Image(
-                      width: 60,
-                      height: 60,
+                      width: 50,
+                      height: 50,
                       image: AssetImage(widget.thong_tin_ban_be.icon_accept))),
             ]),
           ),

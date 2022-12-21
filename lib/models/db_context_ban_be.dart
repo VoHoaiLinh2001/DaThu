@@ -20,7 +20,7 @@ class db_context_ban_be {
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
       icon_cancel: 'asset/cancel.png',
-      icon_accept: 'asset/accept1.png',
+      icon_accept: 'asset/accept.jpg',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
@@ -28,7 +28,7 @@ class db_context_ban_be {
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
       icon_cancel: 'asset/cancel.png',
-      icon_accept: 'asset/accept1.png',
+      icon_accept: 'asset/accept.jpg',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
@@ -36,7 +36,7 @@ class db_context_ban_be {
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
       icon_cancel: 'asset/cancel.png',
-      icon_accept: 'asset/accept1.png',
+      icon_accept: 'asset/accept.jpg',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
@@ -44,7 +44,7 @@ class db_context_ban_be {
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
       icon_cancel: 'asset/cancel.png',
-      icon_accept: 'asset/accept1.png',
+      icon_accept: 'asset/accept.jpg',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
@@ -52,7 +52,7 @@ class db_context_ban_be {
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
       icon_cancel: 'asset/cancel.png',
-      icon_accept: 'asset/accept1.png',
+      icon_accept: 'asset/accept.jpg',
     ));
     items.add(Thong_tin_ban_be(
       avatar: 'asset/avatar.png',
@@ -60,7 +60,7 @@ class db_context_ban_be {
       current_ranking: 'Cảnh giới',
       icon_chat: 'asset/zhucheng_liaotian.png',
       icon_cancel: 'asset/cancel.png',
-      icon_accept: 'asset/accept1.png',
+      icon_accept: 'asset/accept.jpg',
     ));
   }
 }

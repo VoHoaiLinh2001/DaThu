@@ -220,7 +220,7 @@ class _dangnhapState extends State<dangnhap> {
                           onPressed: () {},
                         ),
                         IconButton(
-                          icon: Image.asset('asset/gg.jpg'),
+                          icon: Image.asset('asset/gg.png'),
                           iconSize: 50,
                           onPressed: () {},
                         ),
