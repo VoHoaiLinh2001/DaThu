@@ -160,7 +160,6 @@ class _dangkyState extends State<dangky> {
                               ),
                               width: 140,
                               height: 50,
-                              padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                               child: TextButton(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -200,7 +199,6 @@ class _dangkyState extends State<dangky> {
                               ),
                               width: 140,
                               height: 50,
-                              padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                               child: TextButton(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
