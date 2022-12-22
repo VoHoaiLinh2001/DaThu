@@ -113,7 +113,7 @@ class _quen_mat_khau extends State<quen_mat_khau> {
       Utils.showSnackBar('Email đặt lại mật khẩu đã được gửi');
       Navigator.of(context).popUntil((route) => route.isFirst);
     } on FirebaseAuthException catch (e) {
-      Utils.showSnackBar(e.message);
+      Utils.showSnackBar('Vui lòng nhập Email');
       Navigator.of(context).pop();
     }
   }
