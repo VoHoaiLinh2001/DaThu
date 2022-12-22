@@ -126,7 +126,6 @@ class _dangnhapState extends State<dangnhap> {
                       ),
                       width: 150,
                       height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                       child: TextButton(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -159,7 +158,6 @@ class _dangnhapState extends State<dangnhap> {
                       ),
                       width: 140,
                       height: 50,
-                      padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                       child: TextButton(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -172,7 +170,7 @@ class _dangnhapState extends State<dangnhap> {
                             Text(
                               'Đăng ký',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.black,
                               ),
                             ),
@@ -248,7 +246,7 @@ class _dangnhapState extends State<dangnhap> {
         password: PasswordController.text.trim(),
       );
     } on FirebaseAuthException catch (e) {
-      Utils.showSnackBar('Tài khoản không tồn tại');
+      Utils.showSnackBar('Vui lòng nhập đúng Email và mật khẩu!');
     }
 
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
