@@ -33,8 +33,58 @@ class _quen_mat_khau extends State<quen_mat_khau> {
               fit: BoxFit.cover),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Row(
+              children: [
+                Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                      image:
+                          DecorationImage(image: AssetImage('asset/back.png'))),
+                  child: TextButton(
+                    child: const Text(''),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: ((context) => const dangnhap()),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 30),
+            Expanded(
+              flex: 0,
+              child: Container(
+                child: Text(
+                  'QUÊN MẬT KHẨU',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 45,
+                      shadows: [
+                        Shadow(
+                          color: Colors.red,
+                          blurRadius: 10.0,
+                          offset: Offset(2, 2),
+                        )
+                      ],
+                      foreground: Paint()
+                        ..shader = LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 30, 26, 163),
+                            Color.fromARGB(255, 7, 84, 10),
+                            Color.fromARGB(255, 86, 90, 3),
+                          ],
+                        ).createShader(
+                          Rect.fromLTWH(0, 0, 400, 20),
+                        )),
+                ),
+              ),
+            ),
+            Spacer(),
             Padding(
               padding: EdgeInsets.all(15),
               child: Form(
@@ -95,6 +145,7 @@ class _quen_mat_khau extends State<quen_mat_khau> {
                     ],
                   )),
             ),
+            Spacer(flex: 2),
           ],
         ),
       ),
