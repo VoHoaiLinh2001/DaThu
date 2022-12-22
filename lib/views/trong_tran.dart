@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mauflutter/components/phan_cau_hoi.dart';
+import 'package:mauflutter/controllers/questionController.dart';
+import 'package:mauflutter/models/Question1.dart';
 import 'package:mauflutter/views/ketthuc.dart';
 import 'package:mauflutter/views/trangchu.dart';
 
@@ -12,298 +16,176 @@ class trongtran extends StatefulWidget {
 class _trongtranState extends State<trongtran> {
   @override
   Widget build(BuildContext context) {
+    QuestionController _questionController = Get.put(QuestionController());
     return Scaffold(
       body: Container(
-        constraints: BoxConstraints.expand(),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(
-                'asset/bg_shengsimeng.jpg',
-              ),
-              fit: BoxFit.cover),
-        ),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                    margin: EdgeInsets.only(left: 10),
-                    width: 70,
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: ((context) => const ketthuc()),
-                            ),
-                          );
-                        },
-                        child: Image(image: AssetImage('asset/back.png'))))
-              ],
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    child: IconButton(
-                      icon: Image.asset('asset/1024px-Refresh_icon.png'),
-                      iconSize: 40,
-                      onPressed: () {},
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      icon: Image.asset('asset/zhucheng_liaotian.png'),
-                      iconSize: 40,
-                      onPressed: () {},
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      icon: Image.asset('asset/zhucheng_beibao.png'),
-                      iconSize: 40,
-                      onPressed: () {},
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      icon: Image.asset('asset/huanpi_ZD_meishuzi3.png'),
-                      iconSize: 40,
-                      onPressed: () {},
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      icon: Image.asset('asset/ZZZZZ.png'),
-                      iconSize: 40,
-                      onPressed: () {},
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-              //constraints: BoxConstraints.expand(),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('asset/khung.png'), fit: BoxFit.fill),
-              ),
-              child: Container(
-                height: (MediaQuery.of(context).size.height) * 0.83,
+          constraints: BoxConstraints.expand(),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(
+                  'asset/bg_shengsimeng.jpg',
+                ),
+                fit: BoxFit.cover),
+          ),
+          child: Stack(
+            children: [
+              SafeArea(
+                  child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Điểm số',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                        )
+                            width: 70,
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: ((context) => const ketthuc()),
+                                    ),
+                                  );
+                                },
+                                child:
+                                    Image(image: AssetImage('asset/back.png'))))
                       ],
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height / 2.4,
-                      width: MediaQuery.of(context).size.width / 1.1,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                              'asset/shouchonglibao.png',
-                            ),
-                            fit: BoxFit.fill),
-                      ),
-                      child: Column(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.only(top: 6),
-                                margin: EdgeInsets.only(top: 20, right: 16),
-                                height: 30,
-                                width: 90,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'asset/shouchonglibao_anniu.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: Text('1/10',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.only(top: 60),
-                                margin: EdgeInsets.only(left: 5),
-                                height: 100,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'asset/xuanzhongguanka.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: Text('00:20',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center),
-                              ),
-                            ],
+                          Container(
+                            child: IconButton(
+                              icon:
+                                  Image.asset('asset/1024px-Refresh_icon.png'),
+                              iconSize: 40,
+                              onPressed: () {},
+                            ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 52),
-                            child: Text(
-                              'Câu hỏi',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
+                            child: IconButton(
+                              icon: Image.asset('asset/zhucheng_liaotian.png'),
+                              iconSize: 40,
+                              onPressed: () {},
                             ),
                           ),
+                          Container(
+                            child: IconButton(
+                              icon: Image.asset('asset/zhucheng_beibao.png'),
+                              iconSize: 40,
+                              onPressed: () {},
+                            ),
+                          ),
+                          Container(
+                            child: IconButton(
+                              icon:
+                                  Image.asset('asset/huanpi_ZD_meishuzi3.png'),
+                              iconSize: 40,
+                              onPressed: () {},
+                            ),
+                          ),
+                          Container(
+                            child: IconButton(
+                              icon: Image.asset('asset/ZZZZZ.png'),
+                              iconSize: 40,
+                              onPressed: () {},
+                            ),
+                          )
                         ],
                       ),
                     ),
-                    Container(
-                      width: 300,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('asset/hd_kapai44.png'),
-                            fit: BoxFit.fill),
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.only(top: 5),
-                        child: Column(
-                          children: [
-                            Text('Đáp án',
-                                style: TextStyle(
-                                    fontSize: 25, fontWeight: FontWeight.bold),
-                                textAlign: TextAlign.center),
-                            Column(children: [
-                              Container(
-                                width: 270,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage('asset/zb_di2.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: ((context) => const ketthuc()),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Container(
+                            margin:
+                                EdgeInsets.only(top: 12, left: 10, right: 10),
+                            width: MediaQuery.of(context).size.width * 0.4,
+                            height: 28,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Color(0xFF3F4768), width: 2),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: GetBuilder<QuestionController>(
+                                init: QuestionController(),
+                                builder: (controller) {
+                                  return Stack(
+                                    children: [
+                                      LayoutBuilder(
+                                        builder: (context, contraints) =>
+                                            Container(
+                                          width: contraints.maxWidth *
+                                              controller.animation.value,
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Color(0xFF46A0AE),
+                                                Color(0xFF00FFCB)
+                                              ],
+                                              begin: Alignment.centerLeft,
+                                              end: Alignment.centerRight,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                          ),
+                                        ),
                                       ),
-                                    );
-                                  },
-                                  child: Text(
-                                    'A',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 270,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage('asset/zb_di2.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: TextButton(
-                                  // padding: EdgeInsets.fromLTRB(55, 13, 0, 0),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: ((context) => const ketthuc()),
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    'B',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 270,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage('asset/zb_di2.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: ((context) => const ketthuc()),
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    'C',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 270,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage('asset/zb_di2.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                                child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: ((context) => const ketthuc()),
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    'D',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ]),
-                          ],
+                                      Positioned.fill(
+                                          child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            '${(controller.animation.value * 20).round()}s',
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20),
+                                          )
+                                        ],
+                                      ))
+                                    ],
+                                  );
+                                })),
+                        Container(
+                          padding: EdgeInsets.only(top: 6),
+                          margin: EdgeInsets.only(top: 9),
+                          height: 30,
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    'asset/shouchonglibao_anniu.png'),
+                                fit: BoxFit.fill),
+                          ),
+                          child: Text(
+                            "Câu ${_questionController.questionNumber.value}" +
+                                "/${_questionController.questions.length}",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 16),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
+                    Expanded(
+                      child: PageView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          controller: _questionController.pageController,
+                          onPageChanged: _questionController.updateTheQnNum,
+                          itemCount: _questionController.questions.length,
+                          itemBuilder: (context, index) => phan_cau_hoi(
+                              question: _questionController.questions[index])),
+                    )
                   ],
                 ),
-              ),
-            ),
-          ],
-        ),
-      ),
+              ))
+            ],
+          )),
     );
   }
 }

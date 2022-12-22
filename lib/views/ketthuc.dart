@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/get_instance.dart';
+import 'package:mauflutter/controllers/questionController.dart';
 import 'package:mauflutter/views/coming_soon.dart';
 import 'package:mauflutter/views/dang_ky.dart';
 import 'package:mauflutter/views/info.dart';
@@ -15,6 +18,7 @@ class ketthuc extends StatefulWidget {
 class _ketthuc extends State<ketthuc> {
   @override
   Widget build(BuildContext context) {
+    QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(
         body: Container(
             constraints: BoxConstraints.expand(),
@@ -87,7 +91,8 @@ class _ketthuc extends State<ketthuc> {
                                                 child: Container(
                                                     margin: EdgeInsets.fromLTRB(
                                                         30, 50, 0, 0),
-                                                    child: Text("Điểm số",
+                                                    child: Text(
+                                                        "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: TextStyle(
