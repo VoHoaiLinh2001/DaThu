@@ -55,10 +55,11 @@ class Dap_an extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 40),
-                          child: Text(
-                            "${index + 1}" + "." + "$text",
-                            style: TextStyle(
-                                fontSize: 20, color: getTheRightColor()),
+                          child: FittedBox(
+                            child: Text(
+                              "${index + 1}" + "." + "$text",
+                              style: TextStyle(color: getTheRightColor()),
+                            ),
                           ),
                         ),
                         Container(
