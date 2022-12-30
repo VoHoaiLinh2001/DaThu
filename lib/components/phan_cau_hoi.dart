@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:mauflutter/components/dap_an.dart';
 import 'package:mauflutter/controllers/questionController.dart';
 import 'package:mauflutter/models/Question1.dart';
@@ -32,10 +31,11 @@ class phan_cau_hoi extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 160, left: 40, right: 18),
-                  child: Text(question.question,
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  margin: EdgeInsets.only(top: 160, left: 40, right: 35),
+                  child: Text(
+                    question.question,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
                 ),
               ],
             ),

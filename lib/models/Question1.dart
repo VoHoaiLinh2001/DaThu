@@ -62,7 +62,7 @@ const List data1 = [
     "question": "Bài hát Đi cấy thuộc dân ca vùng, miền nào?",
     "options": [
       'Dân ca Nghệ An',
-      '. Dân ca Thanh Hóa',
+      'Dân ca Thanh Hóa',
       'Dân ca Hà Tĩnh',
       'Dân ca Cao Thắng'
     ],

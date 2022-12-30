@@ -92,7 +92,7 @@ class _ketthuc extends State<ketthuc> {
                                                     margin: EdgeInsets.fromLTRB(
                                                         30, 50, 0, 0),
                                                     child: Text(
-                                                        "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
+                                                        "${_qnController.numOfCorrectAns * 10}/${_qnController.questions.length * 10}",
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: TextStyle(

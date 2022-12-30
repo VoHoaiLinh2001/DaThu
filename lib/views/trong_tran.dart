@@ -160,14 +160,18 @@ class _trongtranState extends State<trongtran> {
                                     'asset/shouchonglibao_anniu.png'),
                                 fit: BoxFit.fill),
                           ),
-                          child: Text(
-                            "Câu ${_questionController.questionNumber.value}" +
-                                "/${_questionController.questions.length}",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 16),
-                            textAlign: TextAlign.center,
+                          child: Obx(
+                            () => Text.rich(
+                              textAlign: TextAlign.center,
+                              TextSpan(
+                                text: "Câu ${_questionController.questionNumber.value}" +
+                                    "/${_questionController.questions.length}",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 16),
+                              ),
+                            ),
                           ),
                         ),
                       ],

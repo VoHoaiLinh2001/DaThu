@@ -39,24 +39,22 @@ class Dap_an extends StatelessWidget {
           return InkWell(
             onTap: press,
             child: Container(
-              margin: EdgeInsets.only(top: 5),
+              margin: EdgeInsets.only(bottom: 2),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 15),
-                    width: 300,
+                    width: MediaQuery.of(context).size.width * 0.85,
                     height: 50,
                     decoration: BoxDecoration(
-                      border: Border.all(color: getTheRightColor()),
-                      image: DecorationImage(
-                          image: AssetImage('asset/zb_di2.png'),
-                          fit: BoxFit.fill),
-                    ),
+                        image: DecorationImage(
+                            image: AssetImage('asset/zb_di2.png'),
+                            fit: BoxFit.fill)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(left: 30),
+                          margin: EdgeInsets.only(left: 40),
                           child: Text(
                             "${index + 1}" + "." + "$text",
                             style: TextStyle(
@@ -64,16 +62,17 @@ class Dap_an extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(right: 30),
+                          margin: EdgeInsets.only(right: 50),
                           height: 25,
                           width: 25,
                           decoration: BoxDecoration(
-                              color: getTheRightColor() ==
-                                      Color.fromARGB(255, 2, 2, 2)
-                                  ? Colors.transparent
-                                  : getTheRightColor(),
-                              borderRadius: BorderRadius.circular(50),
-                              border: Border.all(color: getTheRightColor())),
+                            color: getTheRightColor() ==
+                                    Color.fromARGB(255, 2, 2, 2)
+                                ? Colors.transparent
+                                : getTheRightColor(),
+                            borderRadius: BorderRadius.circular(50),
+                            border: Border.all(color: getTheRightColor()),
+                          ),
                           child:
                               getTheRightColor() == Color.fromARGB(255, 0, 0, 0)
                                   ? null
