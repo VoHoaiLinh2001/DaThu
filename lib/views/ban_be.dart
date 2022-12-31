@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:mauflutter/components/info_canh_gioi_frame.dart';
-import '../components/info_rank_frame.dart';
-import '../models/db_context_rank.dart';
+import '../components/thong_tin_ban_be_dang_cho_frame.dart';
+import '../components/thong_tin_ban_be_frame.dart';
+import '../models/db_context_ban_be.dart';
 
-class phanhang extends StatefulWidget {
-  const phanhang({super.key});
+class banbe extends StatefulWidget {
+  const banbe({super.key});
 
   @override
-  State<phanhang> createState() => _phanhang();
+  State<banbe> createState() => _banbe();
 }
 
-class _phanhang extends State<phanhang> {
+class _banbe extends State<banbe> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -33,7 +33,7 @@ class _phanhang extends State<phanhang> {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('BẢNG XẾP HẠNG',
+                            Text('BẠN BÈ',
                                 style: TextStyle(
                                     fontSize: 30, color: Colors.white))
                           ]))
@@ -43,11 +43,11 @@ class _phanhang extends State<phanhang> {
             tabs: <Widget>[
               Tab(
                 icon: Icon(Icons.group),
-                child: Text('CẢNH GIỚI'),
+                child: Text('BẠN BÈ'),
               ),
               Tab(
                 icon: Icon(Icons.group_add),
-                child: Text('HẠNG'),
+                child: Text('ĐANG CHỜ'),
               ),
             ],
           ),
@@ -61,10 +61,10 @@ class _phanhang extends State<phanhang> {
               ),
               padding: EdgeInsets.only(bottom: 5),
               child: ListView.builder(
-                itemCount: db_context_rank.items.length,
+                itemCount: db_context_ban_be.items.length,
                 itemBuilder: (context, index) {
-                  return Info_canh_gioi_frame(
-                    info: db_context_rank.items[index],
+                  return Thong_tin_ban_be_frame(
+                    thong_tin_ban_be: db_context_ban_be.items[index],
                   );
                 },
               ),
@@ -76,10 +76,10 @@ class _phanhang extends State<phanhang> {
               ),
               padding: EdgeInsets.only(bottom: 5),
               child: ListView.builder(
-                itemCount: db_context_rank.items.length,
+                itemCount: db_context_ban_be.items.length,
                 itemBuilder: (context, index) {
-                  return Info_rank_frame(
-                    info: db_context_rank.items[index],
+                  return Thong_tin_ban_be_dang_cho_frame(
+                    thong_tin_ban_be: db_context_ban_be.items[index],
                   );
                 },
               ),

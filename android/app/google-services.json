@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "962675756768",
+    "project_id": "nhom-da-thu",
+    "storage_bucket": "nhom-da-thu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962675756768:android:aacea9984f4d5ac0a5ca85",
+        "android_client_info": {
+          "package_name": "com.example.mauflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962675756768-pkvdq22q3aojskdfv72v9fc5asg9fof2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJBBdyyU0zCDuNuYO8NsxiwSaP4nC2SVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962675756768-pkvdq22q3aojskdfv72v9fc5asg9fof2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
