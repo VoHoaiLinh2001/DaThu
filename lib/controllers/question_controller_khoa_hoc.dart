@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:mauflutter/models/Question1.dart';
-import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/models/Question_khoa_hoc.dart';
+import 'package:mauflutter/views/ket_thuc_khoa_hoc.dart';
 
-class QuestionController extends GetxController
+class question_controller_khoa_hoc extends GetxController
     with GetSingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation _animation;
@@ -12,16 +12,16 @@ class QuestionController extends GetxController
   late PageController _pageController;
   PageController get pageController => _pageController;
 
-  List<Question1> _questions = data1
+  List<Question_Khoa_Hoc> _questions = question_khoa_hoc
       .map(
-        (question) => Question1(
+        (question) => Question_Khoa_Hoc(
             id: question['id'],
             question: question['question'],
             options: question['options'],
             answer: question['answer_index']),
       )
       .toList();
-  List<Question1> get questions => _questions;
+  List<Question_Khoa_Hoc> get questions => _questions;
 
   bool _isAnswered = false;
   bool get isAnswered => _isAnswered;
@@ -59,7 +59,7 @@ class QuestionController extends GetxController
     _pageController.dispose();
   }
 
-  void checkAns(Question1 question, int selectedIndex) {
+  void checkAns(Question_Khoa_Hoc question, int selectedIndex) {
     _isAnswered = true;
     _correctAns = question.answer;
     _selectedAns = selectedIndex;
@@ -83,7 +83,7 @@ class QuestionController extends GetxController
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      Get.to(const ketthuc());
+      Get.to(const ket_thuc_khoa_hoc());
     }
   }
 

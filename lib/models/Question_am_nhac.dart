@@ -1,16 +1,16 @@
-class Question1 {
+class Question_Am_Nhac {
   final int id, answer;
   final String question;
   final List<String> options;
 
-  Question1(
+  Question_Am_Nhac(
       {required this.id,
       required this.question,
       required this.answer,
       required this.options});
 }
 
-const List data1 = [
+const List question_am_nhac = [
   {
     "id": 1,
     "question": "Bài hát Lý cây đa thuộc dân ca vùng nào?",
@@ -18,7 +18,7 @@ const List data1 = [
       'Dân ca Quảng Nam',
       'Dân ca Thừa Thiên Huế',
       'Dân ca Quan họ Bắc Ninh',
-      'Dân ca Quan họ Cà mau'
+      'Dân ca Quan họ Cà Mau'
     ],
     "answer_index": 3,
   },
@@ -67,7 +67,7 @@ const List data1 = [
     "question": "Bài hát Đi cấy thuộc dân ca vùng, miền nào?",
     "options": [
       'Dân ca Nghệ An',
-      '. Dân ca Thanh Hóa',
+      'Dân ca Thanh Hóa',
       'Dân ca Hà Tĩnh',
       'Dân ca Cao Thắng'
     ],

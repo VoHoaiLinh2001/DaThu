@@ -11,13 +11,13 @@ import 'package:mauflutter/views/dang_nhap.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/services/system_chrome.dart';
 import 'package:mauflutter/views/dauxephang.dart';
-import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/views/ket_thuc_am_nhac.dart';
 import 'package:mauflutter/views/khung.dart';
 import 'package:mauflutter/views/lich_su_dau.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/timdoithu.dart';
 import 'package:mauflutter/views/trangchu.dart';
-import 'package:mauflutter/views/trong_tran.dart';
+import 'package:mauflutter/views/trong_tran_am_nhac.dart';
 import 'package:mauflutter/models/db_context_rank.dart';
 import 'package:mauflutter/models/db_context_history.dart';
 import 'package:mauflutter/models/db_context_ban_be.dart';
@@ -66,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {

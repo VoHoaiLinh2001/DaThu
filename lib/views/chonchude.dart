@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mauflutter/views/chedochoi.dart';
 import 'package:mauflutter/views/trangchu.dart';
-import 'package:mauflutter/views/trong_tran.dart';
+import 'package:mauflutter/views/trong_tran_am_nhac.dart';
+import 'package:mauflutter/views/trong_tran_khoa_hoc.dart';
+import 'package:mauflutter/views/trong_tran_the_thao.dart';
 
 class chonchude extends StatefulWidget {
   const chonchude({super.key});
@@ -90,7 +92,8 @@ class _chonchude extends State<chonchude> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const trongtran()),
+                                    builder: ((context) =>
+                                        const trong_tran_am_nhac()),
                                   ),
                                 );
                               },
@@ -124,7 +127,8 @@ class _chonchude extends State<chonchude> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const trongtran()),
+                                    builder: ((context) =>
+                                        const trong_tran_the_thao()),
                                   ),
                                 );
                               },
@@ -158,7 +162,8 @@ class _chonchude extends State<chonchude> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const trongtran()),
+                                    builder: ((context) =>
+                                        const trong_tran_khoa_hoc()),
                                   ),
                                 );
                               },
@@ -189,12 +194,13 @@ class _chonchude extends State<chonchude> {
                           child: Column(children: [
                             TextButton(
                               onPressed: () {
-                                Navigator.push(
+                                /* Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const trongtran()),
+                                    builder: ((context) =>
+                                        const trong_tran_lich_su()),
                                   ),
-                                );
+                                ); */
                               },
                               child: Text(
                                 'LỊCH SỬ',
@@ -223,12 +229,13 @@ class _chonchude extends State<chonchude> {
                           child: Column(children: [
                             TextButton(
                               onPressed: () {
-                                Navigator.push(
+                                /* Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const trongtran()),
+                                    builder: ((context) =>
+                                        const trong_tran_dia_ly()),
                                   ),
-                                );
+                                ); */
                               },
                               child: Text(
                                 'ĐỊA LÝ',
