@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mauflutter/components/dap_an_the_thao.dart';
-import 'package:mauflutter/controllers/question_controller_the_thao.dart';
-import 'package:mauflutter/models/Question_the_thao.dart';
+import 'package:mauflutter/components/dap_an_lich_su.dart';
+import 'package:mauflutter/controllers/question_controller_lich_su.dart';
+import 'package:mauflutter/models/Question_lich_su.dart';
 
-class phan_cau_hoi_the_thao extends StatelessWidget {
-  const phan_cau_hoi_the_thao({
+class phan_cau_hoi_lich_su extends StatelessWidget {
+  const phan_cau_hoi_lich_su({
     Key? key,
-    required this.question_the_thao,
+    required this.question_lich_su,
   }) : super(key: key);
-  final Question_The_Thao question_the_thao;
+  final Question_Lich_Su question_lich_su;
 
   @override
   Widget build(BuildContext context) {
-    question_controller_the_thao _controller =
-        Get.put(question_controller_the_thao());
+    question_controller_lich_su _controller =
+        Get.put(question_controller_lich_su());
     return Container(
       height: (MediaQuery.of(context).size.height) * 0.75,
       child: ListView(
@@ -34,7 +34,7 @@ class phan_cau_hoi_the_thao extends StatelessWidget {
               child: ListView(
                 children: [
                   Text(
-                    question_the_thao.question,
+                    question_lich_su.question,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ],
@@ -49,11 +49,11 @@ class phan_cau_hoi_the_thao extends StatelessWidget {
             child: Column(
               children: [
                 ...List.generate(
-                  question_the_thao.options.length,
-                  (index) => Dap_an_the_thao(
+                  question_lich_su.options.length,
+                  (index) => Dap_an_lich_su(
                     index: index,
-                    text: question_the_thao.options[index],
-                    press: () => _controller.checkAns(question_the_thao, index),
+                    text: question_lich_su.options[index],
+                    press: () => _controller.checkAns(question_lich_su, index),
                   ),
                 ),
               ],

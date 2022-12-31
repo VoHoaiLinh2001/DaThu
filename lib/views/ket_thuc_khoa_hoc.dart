@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:mauflutter/controllers/question_controller_khoa_hoc.dart';
+import 'package:mauflutter/views/chonchude.dart';
 import 'package:mauflutter/views/coming_soon.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran_khoa_hoc.dart';
@@ -226,13 +227,13 @@ class _ket_thuc_khoa_hoc extends State<ket_thuc_khoa_hoc> {
                                                   color: Colors.white),
                                               textAlign: TextAlign.center),
                                           onPressed: () {
-                                            Navigator.push(
+                                            /* Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                 builder: ((context) =>
                                                     const trong_tran_khoa_hoc()),
                                               ),
-                                            );
+                                            ); */
                                           },
                                         ),
                                         padding:
@@ -255,7 +256,7 @@ class _ket_thuc_khoa_hoc extends State<ket_thuc_khoa_hoc> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: ((context) =>
-                                                    const comingsoon()),
+                                                    const chonchude()),
                                               ),
                                             );
                                           },

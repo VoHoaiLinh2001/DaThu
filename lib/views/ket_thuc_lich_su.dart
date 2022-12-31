@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
-import 'package:mauflutter/controllers/question_controller_am_nhac.dart';
+import 'package:mauflutter/controllers/question_controller_lich_su.dart';
 import 'package:mauflutter/views/chonchude.dart';
 import 'package:mauflutter/views/coming_soon.dart';
 import 'package:mauflutter/views/trangchu.dart';
-import 'package:mauflutter/views/trong_tran_am_nhac.dart';
+import 'package:mauflutter/views/trong_tran_lich_su.dart';
 
-class ket_thuc_am_nhac extends StatefulWidget {
-  const ket_thuc_am_nhac({super.key});
+class ket_thuc_lich_su extends StatefulWidget {
+  const ket_thuc_lich_su({super.key});
 
   @override
-  State<ket_thuc_am_nhac> createState() => _ket_thuc_am_nhac();
+  State<ket_thuc_lich_su> createState() => _ket_thuc_lich_su();
 }
 
-class _ket_thuc_am_nhac extends State<ket_thuc_am_nhac> {
+class _ket_thuc_lich_su extends State<ket_thuc_lich_su> {
   @override
   Widget build(BuildContext context) {
-    question_controller_am_nhac _qnController =
-        Get.put(question_controller_am_nhac());
+    question_controller_lich_su _qnController =
+        Get.put(question_controller_lich_su());
     return Scaffold(
         body: Container(
             constraints: BoxConstraints.expand(),
@@ -148,7 +148,7 @@ class _ket_thuc_am_nhac extends State<ket_thuc_am_nhac> {
                                           fit: BoxFit.fill),
                                     ),
                                     child: Text(
-                                      'Chúc mừng bạn đã hoàn thành tầng 1 phó bảng âm nhạc',
+                                      'Chúc mừng bạn đã hoàn thành tầng 1 phó bảng lịch sử',
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
@@ -231,7 +231,7 @@ class _ket_thuc_am_nhac extends State<ket_thuc_am_nhac> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: ((context) =>
-                                                    const trong_tran_am_nhac()),
+                                                    const trong_tran_lich_su()),
                                               ),
                                             ); */
                                           },

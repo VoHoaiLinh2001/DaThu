@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:mauflutter/controllers/question_controller_the_thao.dart';
+import 'package:mauflutter/controllers/question_controller_dia_ly.dart';
 
-class Dap_an_the_thao extends StatelessWidget {
-  const Dap_an_the_thao({
+class Dap_an_dia_ly extends StatelessWidget {
+  const Dap_an_dia_ly({
     Key? key,
     required this.text,
     required this.index,
@@ -15,8 +15,8 @@ class Dap_an_the_thao extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<question_controller_the_thao>(
-        init: question_controller_the_thao(),
+    return GetBuilder<question_controller_dia_ly>(
+        init: question_controller_dia_ly(),
         builder: (qnController) {
           Color getTheRightColor() {
             if (qnController.isAnswered) {

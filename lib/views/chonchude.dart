@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:mauflutter/views/chedochoi.dart';
 import 'package:mauflutter/views/trangchu.dart';
 import 'package:mauflutter/views/trong_tran_am_nhac.dart';
+import 'package:mauflutter/views/trong_tran_dia_ly.dart';
 import 'package:mauflutter/views/trong_tran_khoa_hoc.dart';
+import 'package:mauflutter/views/trong_tran_lich_su.dart';
 import 'package:mauflutter/views/trong_tran_the_thao.dart';
 
 class chonchude extends StatefulWidget {
@@ -194,13 +196,13 @@ class _chonchude extends State<chonchude> {
                           child: Column(children: [
                             TextButton(
                               onPressed: () {
-                                /* Navigator.push(
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder: ((context) =>
                                         const trong_tran_lich_su()),
                                   ),
-                                ); */
+                                );
                               },
                               child: Text(
                                 'LỊCH SỬ',
@@ -229,13 +231,13 @@ class _chonchude extends State<chonchude> {
                           child: Column(children: [
                             TextButton(
                               onPressed: () {
-                                /* Navigator.push(
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder: ((context) =>
                                         const trong_tran_dia_ly()),
                                   ),
-                                ); */
+                                );
                               },
                               child: Text(
                                 'ĐỊA LÝ',

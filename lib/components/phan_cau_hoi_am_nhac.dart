@@ -29,16 +29,16 @@ class phan_cau_hoi_am_nhac extends StatelessWidget {
                   ),
                   fit: BoxFit.fill),
             ),
-            child: Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(top: 230, left: 50, right: 35),
-                  child: Text(
+            child: Container(
+              margin: EdgeInsets.fromLTRB(50, 230, 35, 40),
+              child: ListView(
+                children: [
+                  Text(
                     question_am_nhac.question,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Container(

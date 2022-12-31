@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
-import 'package:mauflutter/controllers/question_controller_am_nhac.dart';
+import 'package:mauflutter/controllers/question_controller_dia_ly.dart';
 import 'package:mauflutter/views/chonchude.dart';
 import 'package:mauflutter/views/coming_soon.dart';
 import 'package:mauflutter/views/trangchu.dart';
-import 'package:mauflutter/views/trong_tran_am_nhac.dart';
+import 'package:mauflutter/views/trong_tran_dia_ly.dart';
 
-class ket_thuc_am_nhac extends StatefulWidget {
-  const ket_thuc_am_nhac({super.key});
+class ket_thuc_dia_ly extends StatefulWidget {
+  const ket_thuc_dia_ly({super.key});
 
   @override
-  State<ket_thuc_am_nhac> createState() => _ket_thuc_am_nhac();
+  State<ket_thuc_dia_ly> createState() => _ket_thuc_dia_ly();
 }
 
-class _ket_thuc_am_nhac extends State<ket_thuc_am_nhac> {
+class _ket_thuc_dia_ly extends State<ket_thuc_dia_ly> {
   @override
   Widget build(BuildContext context) {
-    question_controller_am_nhac _qnController =
-        Get.put(question_controller_am_nhac());
+    question_controller_dia_ly _qnController =
+        Get.put(question_controller_dia_ly());
     return Scaffold(
         body: Container(
             constraints: BoxConstraints.expand(),
@@ -148,7 +148,7 @@ class _ket_thuc_am_nhac extends State<ket_thuc_am_nhac> {
                                           fit: BoxFit.fill),
                                     ),
                                     child: Text(
-                                      'Chúc mừng bạn đã hoàn thành tầng 1 phó bảng âm nhạc',
+                                      'Chúc mừng bạn đã hoàn thành tầng 1 phó bảng địa lý',
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
@@ -227,11 +227,11 @@ class _ket_thuc_am_nhac extends State<ket_thuc_am_nhac> {
                                                   color: Colors.white),
                                               textAlign: TextAlign.center),
                                           onPressed: () {
-                                            /* Navigator.push(
+                                            /*  Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                 builder: ((context) =>
-                                                    const trong_tran_am_nhac()),
+                                                    const trong_tran_dia_ly()),
                                               ),
                                             ); */
                                           },

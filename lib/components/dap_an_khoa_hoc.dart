@@ -53,13 +53,12 @@ class Dap_an_khoa_hoc extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 40),
-                          child: FittedBox(
-                            child: Text(
-                              "${index + 1}" + ")" + " $text",
-                              style: TextStyle(color: getTheRightColor()),
-                            ),
+                        SizedBox(width: 40),
+                        Expanded(
+                          child: Text(
+                            "${index + 1}" + ")" + " $text",
+                            style: TextStyle(
+                                color: getTheRightColor(), fontSize: 15),
                           ),
                         ),
                         Container(
