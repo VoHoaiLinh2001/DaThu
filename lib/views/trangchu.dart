@@ -4,11 +4,11 @@ import 'package:mauflutter/models/thong_tin_hang.dart';
 import 'package:mauflutter/views/ban_be.dart';
 import 'package:mauflutter/views/coming_soon.dart';
 import 'package:mauflutter/views/info.dart';
-import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/views/ket_thuc_am_nhac.dart';
 import 'package:mauflutter/views/lich_su_dau.dart';
 import 'package:mauflutter/views/phan_hang.dart';
 import 'package:mauflutter/views/shop.dart';
-import 'package:mauflutter/views/trong_tran.dart';
+import 'package:mauflutter/views/trong_tran_am_nhac.dart';
 import 'chedochoi.dart';
 import 'dang_nhap.dart';
 import 'khung.dart';
@@ -409,8 +409,8 @@ class _trangchuState extends State<trangchu> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: 100,
-                  width: 60,
+                  height: 140,
+                  width: 65,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("asset/xuanzhongguanka.png"),

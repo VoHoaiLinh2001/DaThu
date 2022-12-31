@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:mauflutter/controllers/questionController.dart';
+import 'package:mauflutter/controllers/question_controller_khoa_hoc.dart';
 
-class Dap_an extends StatelessWidget {
-  const Dap_an({
+class Dap_an_khoa_hoc extends StatelessWidget {
+  const Dap_an_khoa_hoc({
     Key? key,
     required this.text,
     required this.index,
@@ -15,8 +15,8 @@ class Dap_an extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<QuestionController>(
-        init: QuestionController(),
+    return GetBuilder<question_controller_khoa_hoc>(
+        init: question_controller_khoa_hoc(),
         builder: (qnController) {
           Color getTheRightColor() {
             if (qnController.isAnswered) {
@@ -55,10 +55,11 @@ class Dap_an extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 40),
-                          child: Text(
-                            "${index + 1}" + "." + "$text",
-                            style: TextStyle(
-                                fontSize: 20, color: getTheRightColor()),
+                          child: FittedBox(
+                            child: Text(
+                              "${index + 1}" + ")" + " $text",
+                              style: TextStyle(color: getTheRightColor()),
+                            ),
                           ),
                         ),
                         Container(

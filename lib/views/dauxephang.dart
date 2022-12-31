@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mauflutter/views/lose.dart';
 import 'package:mauflutter/views/win.dart';
 
-import 'ketthuc.dart';
+import 'ket_thuc_am_nhac.dart';
 
 class dauxephang extends StatefulWidget {
   const dauxephang({super.key});

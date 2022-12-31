@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mauflutter/components/phan_cau_hoi.dart';
-import 'package:mauflutter/controllers/questionController.dart';
-import 'package:mauflutter/models/Question1.dart';
-import 'package:mauflutter/views/ketthuc.dart';
+import 'package:mauflutter/components/phan_cau_hoi_khoa_hoc.dart';
+import 'package:mauflutter/controllers/question_controller_khoa_hoc.dart';
+import 'package:mauflutter/models/Question_khoa_hoc.dart';
+import 'package:mauflutter/views/ket_thuc_khoa_hoc.dart';
 import 'package:mauflutter/views/trangchu.dart';
 
-class trongtran extends StatefulWidget {
-  const trongtran({super.key});
+class trong_tran_khoa_hoc extends StatefulWidget {
+  const trong_tran_khoa_hoc({super.key});
 
   @override
-  State<trongtran> createState() => _trongtranState();
+  State<trong_tran_khoa_hoc> createState() => _trong_tran_khoa_hocState();
 }
 
-class _trongtranState extends State<trongtran> {
+class _trong_tran_khoa_hocState extends State<trong_tran_khoa_hoc> {
   @override
   Widget build(BuildContext context) {
-    QuestionController _questionController = Get.put(QuestionController());
+    question_controller_khoa_hoc _questionControllerTheThao =
+        Get.put(question_controller_khoa_hoc());
     return Scaffold(
       body: Container(
           constraints: BoxConstraints.expand(),
@@ -43,7 +44,8 @@ class _trongtranState extends State<trongtran> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: ((context) => const ketthuc()),
+                                      builder: ((context) =>
+                                          const ket_thuc_khoa_hoc()),
                                     ),
                                   );
                                 },
@@ -108,8 +110,8 @@ class _trongtranState extends State<trongtran> {
                                   color: Color(0xFF3F4768), width: 2),
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            child: GetBuilder<QuestionController>(
-                                init: QuestionController(),
+                            child: GetBuilder<question_controller_khoa_hoc>(
+                                init: question_controller_khoa_hoc(),
                                 builder: (controller) {
                                   return Stack(
                                     children: [
@@ -164,8 +166,8 @@ class _trongtranState extends State<trongtran> {
                             () => Text.rich(
                               textAlign: TextAlign.center,
                               TextSpan(
-                                text: "Câu ${_questionController.questionNumber.value}" +
-                                    "/${_questionController.questions.length}",
+                                text: "Câu ${_questionControllerTheThao.questionNumber.value}" +
+                                    "/${_questionControllerTheThao.questions.length}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
@@ -179,11 +181,15 @@ class _trongtranState extends State<trongtran> {
                     Expanded(
                       child: PageView.builder(
                           physics: NeverScrollableScrollPhysics(),
-                          controller: _questionController.pageController,
-                          onPageChanged: _questionController.updateTheQnNum,
-                          itemCount: _questionController.questions.length,
-                          itemBuilder: (context, index) => phan_cau_hoi(
-                              question: _questionController.questions[index])),
+                          controller: _questionControllerTheThao.pageController,
+                          onPageChanged:
+                              _questionControllerTheThao.updateTheQnNum,
+                          itemCount:
+                              _questionControllerTheThao.questions.length,
+                          itemBuilder: (context, index) =>
+                              phan_cau_hoi_khoa_hoc(
+                                  question_khoa_hoc: _questionControllerTheThao
+                                      .questions[index])),
                     )
                   ],
                 ),
